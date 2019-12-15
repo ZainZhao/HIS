@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-zuul/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-zuul/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-zool/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-zool/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-zuul/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-common/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-mbg/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-mbg/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-api-pc/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-api-pc/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-service-search/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-service-search/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/his-cloud-service-search/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

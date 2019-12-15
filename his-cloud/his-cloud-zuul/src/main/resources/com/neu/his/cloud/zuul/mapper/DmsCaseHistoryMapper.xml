@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.cloud.zuul.mapper.DmsCaseHistoryMapper">
+  <resultMap id="BaseResultMap" type="com.neu.his.cloud.zuul.model.DmsCaseHistory">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="chief_complaint" jdbcType="VARCHAR" property="chiefComplaint" />
+    <result column="history_of_present_illness" jdbcType="VARCHAR" property="historyOfPresentIllness" />
+    <result column="history_of_treatment" jdbcType="VARCHAR" property="historyOfTreatment" />
+    <result column="past_history" jdbcType="VARCHAR" property="pastHistory" />
+    <result column="allergies" jdbcType="VARCHAR" property="allergies" />
+    <result column="health_checkup" jdbcType="VARCHAR" property="healthCheckup" />
+    <result column="registration_id" jdbcType="BIGINT" property="registrationId" />
+    <result column="priliminary_dise_str_list" jdbcType="VARCHAR" property="priliminaryDiseStrList" />
+    <result column="start_date" jdbcType="TIMESTAMP" property="startDate" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="gender" jdbcType="INTEGER" property="gender" />
+    <result column="age_str" jdbcType="VARCHAR" property="ageStr" />
+    <result column="check_str_list" jdbcType="VARCHAR" property="checkStrList" />
+    <result column="disposition_str_list" jdbcType="VARCHAR" property="dispositionStrList" />
+    <result column="herbal_prescription_str_list" jdbcType="VARCHAR" property="herbalPrescriptionStrList" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="definite_dise_str_list" jdbcType="VARCHAR" property="definiteDiseStrList" />
+    <result column="patient_id" jdbcType="BIGINT" property="patientId" />
+    <result column="test_str_list" jdbcType="VARCHAR" property="testStrList" />
+    <result column="medicine_prescription_str_list" jdbcType="VARCHAR" property="medicinePrescriptionStrList" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="priliminary_dise_id_list" jdbcType="VARCHAR" property="priliminaryDiseIdList" />
+    <result column="check_result" jdbcType="VARCHAR" property="checkResult" />
+    <result column="test_result" jdbcType="VARCHAR" property="testResult" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, chief_complaint, history_of_present_illness, history_of_treatment, past_history, 
+    allergies, health_checkup, registration_id, priliminary_dise_str_list, start_date, 
+    name, gender, age_str, check_str_list, disposition_str_list, herbal_prescription_str_list, 
+    create_time, definite_dise_str_list, patient_id, test_str_list, medicine_prescription_str_list, 
+    status, priliminary_dise_id_list, check_result, test_result
+  </sql>
+  <select id="selectByExample" parameterType="com.neu.his.cloud.zuul.model.DmsCaseHistoryExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dms_case_history
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dms_case_history
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from dms_case_history
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neu.his.cloud.zuul.model.DmsCaseHistoryExample">
+    delete from dms_case_history
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.neu.his.cloud.zuul.model.DmsCaseHistory">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_case_history (chief_complaint, history_of_present_illness, 
+      history_of_treatment, past_history, allergies, 
+      health_checkup, registration_id, priliminary_dise_str_list, 
+      start_date, name, gender, 
+      age_str, check_str_list, disposition_str_list, 
+      herbal_prescription_str_list, create_time, 
+      definite_dise_str_list, patient_id, test_str_list, 
+      medicine_prescription_str_list, status, priliminary_dise_id_list, 
+      check_result, test_result)
+    values (#{chiefComplaint,jdbcType=VARCHAR}, #{historyOfPresentIllness,jdbcType=VARCHAR}, 
+      #{historyOfTreatment,jdbcType=VARCHAR}, #{pastHistory,jdbcType=VARCHAR}, #{allergies,jdbcType=VARCHAR}, 
+      #{healthCheckup,jdbcType=VARCHAR}, #{registrationId,jdbcType=BIGINT}, #{priliminaryDiseStrList,jdbcType=VARCHAR}, 
+      #{startDate,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, 
+      #{ageStr,jdbcType=VARCHAR}, #{checkStrList,jdbcType=VARCHAR}, #{dispositionStrList,jdbcType=VARCHAR}, 
+      #{herbalPrescriptionStrList,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{definiteDiseStrList,jdbcType=VARCHAR}, #{patientId,jdbcType=BIGINT}, #{testStrList,jdbcType=VARCHAR}, 
+      #{medicinePrescriptionStrList,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{priliminaryDiseIdList,jdbcType=VARCHAR}, 
+      #{checkResult,jdbcType=VARCHAR}, #{testResult,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.neu.his.cloud.zuul.model.DmsCaseHistory">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_case_history
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="chiefComplaint != null">
+        chief_complaint,
+      </if>
+      <if test="historyOfPresentIllness != null">
+        history_of_present_illness,
+      </if>
+      <if test="historyOfTreatment != null">
+        history_of_treatment,
+      </if>
+      <if test="pastHistory != null">
+        past_history,
+      </if>
+      <if test="allergies != null">
+        allergies,
+      </if>
+      <if test="healthCheckup != null">
+        health_checkup,
+      </if>
+      <if test="registrationId != null">
+        registration_id,
+      </if>
+      <if test="priliminaryDiseStrList != null">
+        priliminary_dise_str_list,
+      </if>
+      <if test="startDate != null">
+        start_date,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="ageStr != null">
+        age_str,
+      </if>
+      <if test="checkStrList != null">
+        check_str_list,
+      </if>
+      <if test="dispositionStrList != null">
+        disposition_str_list,
+      </if>
+      <if test="herbalPrescriptionStrList != null">
+        herbal_prescription_str_list,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="definiteDiseStrList != null">
+        definite_dise_str_list,
+      </if>
+      <if test="patientId != null">
+        patient_id,
+      </if>
+      <if test="testStrList != null">
+        test_str_list,
+      </if>
+      <if test="medicinePrescriptionStrList != null">
+        medicine_prescription_str_list,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="priliminaryDiseIdList != null">
+        priliminary_dise_id_list,
+      </if>
+      <if test="checkResult != null">
+        check_result,
+      </if>
+      <if test="testResult != null">
+        test_result,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="chiefComplaint != null">
+        #{chiefComplaint,jdbcType=VARCHAR},
+      </if>
+      <if test="historyOfPresentIllness != null">
+        #{historyOfPresentIllness,jdbcType=VARCHAR},
+      </if>
+      <if test="historyOfTreatment != null">
+        #{historyOfTreatment,jdbcType=VARCHAR},
+      </if>
+      <if test="pastHistory != null">
+        #{pastHistory,jdbcType=VARCHAR},
+      </if>
+      <if test="allergies != null">
+        #{allergies,jdbcType=VARCHAR},
+      </if>
+      <if test="healthCheckup != null">
+        #{healthCheckup,jdbcType=VARCHAR},
+      </if>
+      <if test="registrationId != null">
+        #{registrationId,jdbcType=BIGINT},
+      </if>
+      <if test="priliminaryDiseStrList != null">
+        #{priliminaryDiseStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="startDate != null">
+        #{startDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="ageStr != null">
+        #{ageStr,jdbcType=VARCHAR},
+      </if>
+      <if test="checkStrList != null">
+        #{checkStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="dispositionStrList != null">
+        #{dispositionStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="herbalPrescriptionStrList != null">
+        #{herbalPrescriptionStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="definiteDiseStrList != null">
+        #{definiteDiseStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="patientId != null">
+        #{patientId,jdbcType=BIGINT},
+      </if>
+      <if test="testStrList != null">
+        #{testStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="medicinePrescriptionStrList != null">
+        #{medicinePrescriptionStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="priliminaryDiseIdList != null">
+        #{priliminaryDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="checkResult != null">
+        #{checkResult,jdbcType=VARCHAR},
+      </if>
+      <if test="testResult != null">
+        #{testResult,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neu.his.cloud.zuul.model.DmsCaseHistoryExample" resultType="java.lang.Integer">
+    select count(*) from dms_case_history
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dms_case_history
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.chiefComplaint != null">
+        chief_complaint = #{record.chiefComplaint,jdbcType=VARCHAR},
+      </if>
+      <if test="record.historyOfPresentIllness != null">
+        history_of_present_illness = #{record.historyOfPresentIllness,jdbcType=VARCHAR},
+      </if>
+      <if test="record.historyOfTreatment != null">
+        history_of_treatment = #{record.historyOfTreatment,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pastHistory != null">
+        past_history = #{record.pastHistory,jdbcType=VARCHAR},
+      </if>
+      <if test="record.allergies != null">
+        allergies = #{record.allergies,jdbcType=VARCHAR},
+      </if>
+      <if test="record.healthCheckup != null">
+        health_checkup = #{record.healthCheckup,jdbcType=VARCHAR},
+      </if>
+      <if test="record.registrationId != null">
+        registration_id = #{record.registrationId,jdbcType=BIGINT},
+      </if>
+      <if test="record.priliminaryDiseStrList != null">
+        priliminary_dise_str_list = #{record.priliminaryDiseStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.startDate != null">
+        start_date = #{record.startDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gender != null">
+        gender = #{record.gender,jdbcType=INTEGER},
+      </if>
+      <if test="record.ageStr != null">
+        age_str = #{record.ageStr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.checkStrList != null">
+        check_str_list = #{record.checkStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dispositionStrList != null">
+        disposition_str_list = #{record.dispositionStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.herbalPrescriptionStrList != null">
+        herbal_prescription_str_list = #{record.herbalPrescriptionStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.definiteDiseStrList != null">
+        definite_dise_str_list = #{record.definiteDiseStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.patientId != null">
+        patient_id = #{record.patientId,jdbcType=BIGINT},
+      </if>
+      <if test="record.testStrList != null">
+        test_str_list = #{record.testStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.medicinePrescriptionStrList != null">
+        medicine_prescription_str_list = #{record.medicinePrescriptionStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.priliminaryDiseIdList != null">
+        priliminary_dise_id_list = #{record.priliminaryDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.checkResult != null">
+        check_result = #{record.checkResult,jdbcType=VARCHAR},
+      </if>
+      <if test="record.testResult != null">
+        test_result = #{record.testResult,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dms_case_history
+    set id = #{record.id,jdbcType=BIGINT},
+      chief_complaint = #{record.chiefComplaint,jdbcType=VARCHAR},
+      history_of_present_illness = #{record.historyOfPresentIllness,jdbcType=VARCHAR},
+      history_of_treatment = #{record.historyOfTreatment,jdbcType=VARCHAR},
+      past_history = #{record.pastHistory,jdbcType=VARCHAR},
+      allergies = #{record.allergies,jdbcType=VARCHAR},
+      health_checkup = #{record.healthCheckup,jdbcType=VARCHAR},
+      registration_id = #{record.registrationId,jdbcType=BIGINT},
+      priliminary_dise_str_list = #{record.priliminaryDiseStrList,jdbcType=VARCHAR},
+      start_date = #{record.startDate,jdbcType=TIMESTAMP},
+      name = #{record.name,jdbcType=VARCHAR},
+      gender = #{record.gender,jdbcType=INTEGER},
+      age_str = #{record.ageStr,jdbcType=VARCHAR},
+      check_str_list = #{record.checkStrList,jdbcType=VARCHAR},
+      disposition_str_list = #{record.dispositionStrList,jdbcType=VARCHAR},
+      herbal_prescription_str_list = #{record.herbalPrescriptionStrList,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      definite_dise_str_list = #{record.definiteDiseStrList,jdbcType=VARCHAR},
+      patient_id = #{record.patientId,jdbcType=BIGINT},
+      test_str_list = #{record.testStrList,jdbcType=VARCHAR},
+      medicine_prescription_str_list = #{record.medicinePrescriptionStrList,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
+      priliminary_dise_id_list = #{record.priliminaryDiseIdList,jdbcType=VARCHAR},
+      check_result = #{record.checkResult,jdbcType=VARCHAR},
+      test_result = #{record.testResult,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neu.his.cloud.zuul.model.DmsCaseHistory">
+    update dms_case_history
+    <set>
+      <if test="chiefComplaint != null">
+        chief_complaint = #{chiefComplaint,jdbcType=VARCHAR},
+      </if>
+      <if test="historyOfPresentIllness != null">
+        history_of_present_illness = #{historyOfPresentIllness,jdbcType=VARCHAR},
+      </if>
+      <if test="historyOfTreatment != null">
+        history_of_treatment = #{historyOfTreatment,jdbcType=VARCHAR},
+      </if>
+      <if test="pastHistory != null">
+        past_history = #{pastHistory,jdbcType=VARCHAR},
+      </if>
+      <if test="allergies != null">
+        allergies = #{allergies,jdbcType=VARCHAR},
+      </if>
+      <if test="healthCheckup != null">
+        health_checkup = #{healthCheckup,jdbcType=VARCHAR},
+      </if>
+      <if test="registrationId != null">
+        registration_id = #{registrationId,jdbcType=BIGINT},
+      </if>
+      <if test="priliminaryDiseStrList != null">
+        priliminary_dise_str_list = #{priliminaryDiseStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="startDate != null">
+        start_date = #{startDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="ageStr != null">
+        age_str = #{ageStr,jdbcType=VARCHAR},
+      </if>
+      <if test="checkStrList != null">
+        check_str_list = #{checkStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="dispositionStrList != null">
+        disposition_str_list = #{dispositionStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="herbalPrescriptionStrList != null">
+        herbal_prescription_str_list = #{herbalPrescriptionStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="definiteDiseStrList != null">
+        definite_dise_str_list = #{definiteDiseStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="patientId != null">
+        patient_id = #{patientId,jdbcType=BIGINT},
+      </if>
+      <if test="testStrList != null">
+        test_str_list = #{testStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="medicinePrescriptionStrList != null">
+        medicine_prescription_str_list = #{medicinePrescriptionStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="priliminaryDiseIdList != null">
+        priliminary_dise_id_list = #{priliminaryDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="checkResult != null">
+        check_result = #{checkResult,jdbcType=VARCHAR},
+      </if>
+      <if test="testResult != null">
+        test_result = #{testResult,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neu.his.cloud.zuul.model.DmsCaseHistory">
+    update dms_case_history
+    set chief_complaint = #{chiefComplaint,jdbcType=VARCHAR},
+      history_of_present_illness = #{historyOfPresentIllness,jdbcType=VARCHAR},
+      history_of_treatment = #{historyOfTreatment,jdbcType=VARCHAR},
+      past_history = #{pastHistory,jdbcType=VARCHAR},
+      allergies = #{allergies,jdbcType=VARCHAR},
+      health_checkup = #{healthCheckup,jdbcType=VARCHAR},
+      registration_id = #{registrationId,jdbcType=BIGINT},
+      priliminary_dise_str_list = #{priliminaryDiseStrList,jdbcType=VARCHAR},
+      start_date = #{startDate,jdbcType=TIMESTAMP},
+      name = #{name,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=INTEGER},
+      age_str = #{ageStr,jdbcType=VARCHAR},
+      check_str_list = #{checkStrList,jdbcType=VARCHAR},
+      disposition_str_list = #{dispositionStrList,jdbcType=VARCHAR},
+      herbal_prescription_str_list = #{herbalPrescriptionStrList,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      definite_dise_str_list = #{definiteDiseStrList,jdbcType=VARCHAR},
+      patient_id = #{patientId,jdbcType=BIGINT},
+      test_str_list = #{testStrList,jdbcType=VARCHAR},
+      medicine_prescription_str_list = #{medicinePrescriptionStrList,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      priliminary_dise_id_list = #{priliminaryDiseIdList,jdbcType=VARCHAR},
+      check_result = #{checkResult,jdbcType=VARCHAR},
+      test_result = #{testResult,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

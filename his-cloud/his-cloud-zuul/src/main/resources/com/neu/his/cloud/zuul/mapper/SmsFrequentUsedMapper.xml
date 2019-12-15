@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.cloud.zuul.mapper.SmsFrequentUsedMapper">
+  <resultMap id="BaseResultMap" type="com.neu.his.cloud.zuul.model.SmsFrequentUsed">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="medicine_dise_id_list" jdbcType="VARCHAR" property="medicineDiseIdList" />
+    <result column="disposition_id_list" jdbcType="VARCHAR" property="dispositionIdList" />
+    <result column="test_id_list" jdbcType="VARCHAR" property="testIdList" />
+    <result column="herbal_dise_id_list" jdbcType="VARCHAR" property="herbalDiseIdList" />
+    <result column="check_model_id_list" jdbcType="VARCHAR" property="checkModelIdList" />
+    <result column="disposition_model_id_list" jdbcType="VARCHAR" property="dispositionModelIdList" />
+    <result column="test_model_id_list" jdbcType="VARCHAR" property="testModelIdList" />
+    <result column="drug_model_id_list" jdbcType="VARCHAR" property="drugModelIdList" />
+    <result column="staff_id" jdbcType="BIGINT" property="staffId" />
+    <result column="check_id_list" jdbcType="VARCHAR" property="checkIdList" />
+    <result column="drug_id_list" jdbcType="VARCHAR" property="drugIdList" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, medicine_dise_id_list, disposition_id_list, test_id_list, herbal_dise_id_list, 
+    check_model_id_list, disposition_model_id_list, test_model_id_list, drug_model_id_list, 
+    staff_id, check_id_list, drug_id_list
+  </sql>
+  <select id="selectByExample" parameterType="com.neu.his.cloud.zuul.model.SmsFrequentUsedExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from sms_frequent_used
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sms_frequent_used
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from sms_frequent_used
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neu.his.cloud.zuul.model.SmsFrequentUsedExample">
+    delete from sms_frequent_used
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.neu.his.cloud.zuul.model.SmsFrequentUsed">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sms_frequent_used (medicine_dise_id_list, disposition_id_list, 
+      test_id_list, herbal_dise_id_list, check_model_id_list, 
+      disposition_model_id_list, test_model_id_list, 
+      drug_model_id_list, staff_id, check_id_list, 
+      drug_id_list)
+    values (#{medicineDiseIdList,jdbcType=VARCHAR}, #{dispositionIdList,jdbcType=VARCHAR}, 
+      #{testIdList,jdbcType=VARCHAR}, #{herbalDiseIdList,jdbcType=VARCHAR}, #{checkModelIdList,jdbcType=VARCHAR}, 
+      #{dispositionModelIdList,jdbcType=VARCHAR}, #{testModelIdList,jdbcType=VARCHAR}, 
+      #{drugModelIdList,jdbcType=VARCHAR}, #{staffId,jdbcType=BIGINT}, #{checkIdList,jdbcType=VARCHAR}, 
+      #{drugIdList,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.neu.his.cloud.zuul.model.SmsFrequentUsed">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sms_frequent_used
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="medicineDiseIdList != null">
+        medicine_dise_id_list,
+      </if>
+      <if test="dispositionIdList != null">
+        disposition_id_list,
+      </if>
+      <if test="testIdList != null">
+        test_id_list,
+      </if>
+      <if test="herbalDiseIdList != null">
+        herbal_dise_id_list,
+      </if>
+      <if test="checkModelIdList != null">
+        check_model_id_list,
+      </if>
+      <if test="dispositionModelIdList != null">
+        disposition_model_id_list,
+      </if>
+      <if test="testModelIdList != null">
+        test_model_id_list,
+      </if>
+      <if test="drugModelIdList != null">
+        drug_model_id_list,
+      </if>
+      <if test="staffId != null">
+        staff_id,
+      </if>
+      <if test="checkIdList != null">
+        check_id_list,
+      </if>
+      <if test="drugIdList != null">
+        drug_id_list,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="medicineDiseIdList != null">
+        #{medicineDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="dispositionIdList != null">
+        #{dispositionIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="testIdList != null">
+        #{testIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="herbalDiseIdList != null">
+        #{herbalDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="checkModelIdList != null">
+        #{checkModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="dispositionModelIdList != null">
+        #{dispositionModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="testModelIdList != null">
+        #{testModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="drugModelIdList != null">
+        #{drugModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="staffId != null">
+        #{staffId,jdbcType=BIGINT},
+      </if>
+      <if test="checkIdList != null">
+        #{checkIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="drugIdList != null">
+        #{drugIdList,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neu.his.cloud.zuul.model.SmsFrequentUsedExample" resultType="java.lang.Integer">
+    select count(*) from sms_frequent_used
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update sms_frequent_used
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.medicineDiseIdList != null">
+        medicine_dise_id_list = #{record.medicineDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dispositionIdList != null">
+        disposition_id_list = #{record.dispositionIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.testIdList != null">
+        test_id_list = #{record.testIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.herbalDiseIdList != null">
+        herbal_dise_id_list = #{record.herbalDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.checkModelIdList != null">
+        check_model_id_list = #{record.checkModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dispositionModelIdList != null">
+        disposition_model_id_list = #{record.dispositionModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.testModelIdList != null">
+        test_model_id_list = #{record.testModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.drugModelIdList != null">
+        drug_model_id_list = #{record.drugModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.staffId != null">
+        staff_id = #{record.staffId,jdbcType=BIGINT},
+      </if>
+      <if test="record.checkIdList != null">
+        check_id_list = #{record.checkIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.drugIdList != null">
+        drug_id_list = #{record.drugIdList,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update sms_frequent_used
+    set id = #{record.id,jdbcType=BIGINT},
+      medicine_dise_id_list = #{record.medicineDiseIdList,jdbcType=VARCHAR},
+      disposition_id_list = #{record.dispositionIdList,jdbcType=VARCHAR},
+      test_id_list = #{record.testIdList,jdbcType=VARCHAR},
+      herbal_dise_id_list = #{record.herbalDiseIdList,jdbcType=VARCHAR},
+      check_model_id_list = #{record.checkModelIdList,jdbcType=VARCHAR},
+      disposition_model_id_list = #{record.dispositionModelIdList,jdbcType=VARCHAR},
+      test_model_id_list = #{record.testModelIdList,jdbcType=VARCHAR},
+      drug_model_id_list = #{record.drugModelIdList,jdbcType=VARCHAR},
+      staff_id = #{record.staffId,jdbcType=BIGINT},
+      check_id_list = #{record.checkIdList,jdbcType=VARCHAR},
+      drug_id_list = #{record.drugIdList,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neu.his.cloud.zuul.model.SmsFrequentUsed">
+    update sms_frequent_used
+    <set>
+      <if test="medicineDiseIdList != null">
+        medicine_dise_id_list = #{medicineDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="dispositionIdList != null">
+        disposition_id_list = #{dispositionIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="testIdList != null">
+        test_id_list = #{testIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="herbalDiseIdList != null">
+        herbal_dise_id_list = #{herbalDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="checkModelIdList != null">
+        check_model_id_list = #{checkModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="dispositionModelIdList != null">
+        disposition_model_id_list = #{dispositionModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="testModelIdList != null">
+        test_model_id_list = #{testModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="drugModelIdList != null">
+        drug_model_id_list = #{drugModelIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="staffId != null">
+        staff_id = #{staffId,jdbcType=BIGINT},
+      </if>
+      <if test="checkIdList != null">
+        check_id_list = #{checkIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="drugIdList != null">
+        drug_id_list = #{drugIdList,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neu.his.cloud.zuul.model.SmsFrequentUsed">
+    update sms_frequent_used
+    set medicine_dise_id_list = #{medicineDiseIdList,jdbcType=VARCHAR},
+      disposition_id_list = #{dispositionIdList,jdbcType=VARCHAR},
+      test_id_list = #{testIdList,jdbcType=VARCHAR},
+      herbal_dise_id_list = #{herbalDiseIdList,jdbcType=VARCHAR},
+      check_model_id_list = #{checkModelIdList,jdbcType=VARCHAR},
+      disposition_model_id_list = #{dispositionModelIdList,jdbcType=VARCHAR},
+      test_model_id_list = #{testModelIdList,jdbcType=VARCHAR},
+      drug_model_id_list = #{drugModelIdList,jdbcType=VARCHAR},
+      staff_id = #{staffId,jdbcType=BIGINT},
+      check_id_list = #{checkIdList,jdbcType=VARCHAR},
+      drug_id_list = #{drugIdList,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

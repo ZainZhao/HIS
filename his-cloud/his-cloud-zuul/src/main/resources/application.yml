@@ -1,0 +1,91 @@
+spring:
+  application:
+    name: his-cloud-zuul
+  zipkin:
+    base-url: http://localhost:9411
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+  datasource:
+    url: jdbc:mysql://localhost:3306/his?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+  jackson:
+    time-zone: GMT+8  #市区设置
+
+server:
+  port: 10022  #10011
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+#feign:  #添加熔断
+#  hystrix:
+#    enabled: true
+
+zuul:
+  routes:
+#    api-a:
+#      path: /pc/**
+#      serviceId: his-cloud-api-pc
+    api-b:
+      path: /app/**
+      serviceId: his-cloud-api-app
+
+gateway:
+  globalcors:
+    corsConfigurations:
+      '[/**]':
+        allowedOrigins: "docs.spring.io"
+        allowedMethods:
+          - GET
+          - POST
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   #暴露所有的端点我们可以看到更多的服务实例相关信息，
+    endpoint:
+      health:
+        show-details: ALWAYS   #health endpoint是否必须显示全部细节
+
+
+mybatis:
+  type-aliases-package: com.neu.his.cloud.zull.model
+  mapper-locations: classpath:/com.neu.his.cloud.zull.com.neu.his.cloud.zuul.mapper/*.xml
+
+
+
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: mySecret #JWT加解密使用的密钥
+  expiration: 604800 #JWT的超期限时间(60*60*24)
+  tokenHead: Bearer  #JWT负载中拿到开头
+
+
+logging:
+  level:
+    root: info #日志配置DEBUG,INFO,WARN,ERROR
+    com.neu.his: debug
+  file: E:/log #配置日志文件路径
+  path: his-cloud-zuul-log.log #配置日志生成名称
+
+
+ribbon:
+  ConnectTimeout: 150000
+  # 请求处理的超时时间
+  ReadTimeout: 150000
+

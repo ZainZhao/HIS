@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.cloud.service.bms.mapper.PmsPatientMapper">
+  <resultMap id="BaseResultMap" type="com.neu.his.cloud.service.bms.model.PmsPatient">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="date_of_birth" jdbcType="TIMESTAMP" property="dateOfBirth" />
+    <result column="identification_no" jdbcType="VARCHAR" property="identificationNo" />
+    <result column="home_address" jdbcType="VARCHAR" property="homeAddress" />
+    <result column="phone_no" jdbcType="VARCHAR" property="phoneNo" />
+    <result column="gender" jdbcType="INTEGER" property="gender" />
+    <result column="medical_record_no" jdbcType="VARCHAR" property="medicalRecordNo" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, name, date_of_birth, identification_no, home_address, phone_no, gender, medical_record_no
+  </sql>
+  <select id="selectByExample" parameterType="com.neu.his.cloud.service.bms.model.PmsPatientExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from pms_patient
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from pms_patient
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from pms_patient
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neu.his.cloud.service.bms.model.PmsPatientExample">
+    delete from pms_patient
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.neu.his.cloud.service.bms.model.PmsPatient">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_patient (name, date_of_birth, identification_no, 
+      home_address, phone_no, gender, 
+      medical_record_no)
+    values (#{name,jdbcType=VARCHAR}, #{dateOfBirth,jdbcType=TIMESTAMP}, #{identificationNo,jdbcType=VARCHAR}, 
+      #{homeAddress,jdbcType=VARCHAR}, #{phoneNo,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, 
+      #{medicalRecordNo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.neu.his.cloud.service.bms.model.PmsPatient">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into pms_patient
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        name,
+      </if>
+      <if test="dateOfBirth != null">
+        date_of_birth,
+      </if>
+      <if test="identificationNo != null">
+        identification_no,
+      </if>
+      <if test="homeAddress != null">
+        home_address,
+      </if>
+      <if test="phoneNo != null">
+        phone_no,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="medicalRecordNo != null">
+        medical_record_no,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="dateOfBirth != null">
+        #{dateOfBirth,jdbcType=TIMESTAMP},
+      </if>
+      <if test="identificationNo != null">
+        #{identificationNo,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress != null">
+        #{homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNo != null">
+        #{phoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="medicalRecordNo != null">
+        #{medicalRecordNo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neu.his.cloud.service.bms.model.PmsPatientExample" resultType="java.lang.Integer">
+    select count(*) from pms_patient
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update pms_patient
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dateOfBirth != null">
+        date_of_birth = #{record.dateOfBirth,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.identificationNo != null">
+        identification_no = #{record.identificationNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.homeAddress != null">
+        home_address = #{record.homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.phoneNo != null">
+        phone_no = #{record.phoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.gender != null">
+        gender = #{record.gender,jdbcType=INTEGER},
+      </if>
+      <if test="record.medicalRecordNo != null">
+        medical_record_no = #{record.medicalRecordNo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update pms_patient
+    set id = #{record.id,jdbcType=BIGINT},
+      name = #{record.name,jdbcType=VARCHAR},
+      date_of_birth = #{record.dateOfBirth,jdbcType=TIMESTAMP},
+      identification_no = #{record.identificationNo,jdbcType=VARCHAR},
+      home_address = #{record.homeAddress,jdbcType=VARCHAR},
+      phone_no = #{record.phoneNo,jdbcType=VARCHAR},
+      gender = #{record.gender,jdbcType=INTEGER},
+      medical_record_no = #{record.medicalRecordNo,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neu.his.cloud.service.bms.model.PmsPatient">
+    update pms_patient
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="dateOfBirth != null">
+        date_of_birth = #{dateOfBirth,jdbcType=TIMESTAMP},
+      </if>
+      <if test="identificationNo != null">
+        identification_no = #{identificationNo,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress != null">
+        home_address = #{homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNo != null">
+        phone_no = #{phoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=INTEGER},
+      </if>
+      <if test="medicalRecordNo != null">
+        medical_record_no = #{medicalRecordNo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neu.his.cloud.service.bms.model.PmsPatient">
+    update pms_patient
+    set name = #{name,jdbcType=VARCHAR},
+      date_of_birth = #{dateOfBirth,jdbcType=TIMESTAMP},
+      identification_no = #{identificationNo,jdbcType=VARCHAR},
+      home_address = #{homeAddress,jdbcType=VARCHAR},
+      phone_no = #{phoneNo,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=INTEGER},
+      medical_record_no = #{medicalRecordNo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

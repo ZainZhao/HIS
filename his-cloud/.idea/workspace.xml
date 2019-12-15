@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="603f0005-23a7-4a32-aade-bc9735dcb0d3" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/his-cloud-dependencies/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-service-sms/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-api-admin/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-api-app/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-zuul/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-zool/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-config/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-zipkin/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-monitor/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-common/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-mbg/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-service-bms/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-service-dms/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-service-pms/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-api-pc/target/" />
+    <ignored path="$PROJECT_DIR$/his-cloud-service-search/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/his_cloud$ApiPcApplication.ic" NAME="ApiPcApplication Coverage Results" MODIFIED="1562165047240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="his-cloud" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mbg</find>
+      <find>9300</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/distribution/api/pc/sms/ApiPcSmsWorkloadDistributionService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/controller/sms/SmsWorkloadController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/service/sms/SmsWorkloadService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/dto/dms/DmsDrugModelParam.java" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/dto/dms/DmsDrugModelResult.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/dto/dms/DmsDrugModelResult.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/dto/dms/DmsDrugModelParam.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsDrugModelResult.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsDrugModelParam.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/controller/dms/DmsCaseHistoryController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/service/dms/DmsCaseHistoryService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/controller/DmsCaseHistoryController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/service/impl/DmsCaseHistoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/service/impl/DmsDrugStoreServiceImpl.java" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/distribution/api/pc/dms/ApiPcDmsDrugDistributionService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/controller/dms/DmsDrugDistributionController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/controller/DmsDrugController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/service/DmsDrugService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/service/impl/DmsDrugServiceImpl.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/service/dms/DmsDrugService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/controller/dms/DmsDrugController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-pms/src/main/java/com/neu/his/cloud/service/pms/service/impl/PmsPatientServiceImpl.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/service/bms/BmsFeeQueryService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/distribution/api/pc/dms/ApiPcDmsCaseHistoryDistributionService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/controller/dms/DmsCaseHistoryDistributionController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/ApiPcApplication.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/config/SystemConfig.java" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/his-cloud-eureka/src/main/java/com/neu/his/cloud/eureka/EurekaApplication.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/his-cloud-service-sms/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/his-cloud-service-pms/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/distribution/api/pc/sms/ApiPcSmsEchartsDistributionService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/controller/sms/SmsEchartsDistributionController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/controller/sms/SmsEchartsController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/service/sms/SmsEchartsService.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-sms/src/main/java/com/neu/his/cloud/service/sms/controller/SmsEchartsController.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsMedicineItemRecordResult.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsHerbalPrescriptionRecordResult.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsHerbalItemRecordResult.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/dto/dms/DmsMedicineItemRecordResult.java" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/dto/dms/DmsMedicineItemRecordResult.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-bms/src/main/java/com/neu/his/cloud/service/bms/service/impl/BmsFeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/his-cloud-eureka/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-sms/src/main/java/com/neu/his/cloud/service/sms/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-pms/src/main/java/com/neu/his/cloud/service/pms/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/his-cloud-service-bms/src/main/java/com/neu/his/cloud/service/bms/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/config/Swagger2Config.java" />
+        <option value="$PROJECT_DIR$/his-cloud-api-app/src/main/java/com/neu/his/cloud/api/app/config/Swagger2Config.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="F:\maven\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="his-cloud-zuul" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="his-cloud-zuul" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="his-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="his-cloud" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562949421514" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML&#10;XHTML" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15261383" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.neu.his.cloud.api.app.service" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.neu.his.cloud.zuul.service.impl" />
+      <recent name="com.neu.his.cloud.service.sms.service" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.neu.his.cloud.service.sms" />
+      <recent name="com.neu.his.cloud.service.sms.mapper" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-zuul\src\main\java\com\neu\his\cloud\zuul\dto\dms" />
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-api-pc\src\main\java\com\neu\his\cloud\api\pc\dto\dms" />
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-zuul\src\main\java\com\neu\his\cloud\zuul\dto\sms" />
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-api-app\src\main\java\com\neu\his\cloud\api\app\dto\sms" />
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-api-pc\src\main\java\com\neu\his\cloud\api\pc\dto\sms" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.neu.his.cloud.api.pc.controller.dms" />
+      <recent name="com.neu.his.cloud.zuul.dto.dms" />
+      <recent name="com.neu.his.cloud.api.pc.dto.dms" />
+      <recent name="com.neu.his.cloud.service.dms.dto.dms" />
+      <recent name="com.neu.his.cloud.zuul.controller.dms" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-service-search\src" />
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-service-search" />
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-service-search\src\main\java\com\neu\his\cloud\service\search\service\model" />
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-service-sms\src\main\resources\com\neu\his\cloud\service\sms\mapper" />
+      <recent name="C:\Users\lenovo-aa\Desktop\实训\项目\real\cloud\his-cloud\his-cloud-zuul\src\main\resources\com\neu\his\cloud\zuul\mapper" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.21346705" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.EurekaApplication">
+    <configuration name="Generator (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.neu.his.cloud.service.dms.util.Generator" />
+      <module name="his-cloud-service-dms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neu.his.cloud.service.dms.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Generator (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.neu.his.cloud.service.bms.util.Generator" />
+      <module name="his-cloud-service-bms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neu.his.cloud.service.bms.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Generator (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.neu.his.cloud.service.sms.util.Generator" />
+      <module name="his-cloud-service-sms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neu.his.cloud.service.sms.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.neu.his.cloud.zuul.util.Generator" />
+      <module name="his-cloud-zuul" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neu.his.cloud.zuul.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
+      <module name="his-cloud-api-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neu.his.cloud.api.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.api.app.ApiAppApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiPcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="his-cloud-api-pc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.api.pc.ApiPcApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="his-cloud-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.config.ConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="his-cloud-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.eureka.EurekaApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MonitorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="his-cloud-monitor" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.monitor.MonitorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceBmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="his-cloud-service-bms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.service.bms.ServiceBmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceDmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="his-cloud-service-dms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.service.dms.ServiceDmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicePmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="his-cloud-service-pms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.service.pms.ServicePmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceSearchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="his-cloud-service-search" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.service.search.ServiceSearchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceSmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="his-cloud-service-sms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.service.sms.ServiceSmsApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZipkinApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="his-cloud-zipkin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.zipkin.ZipkinApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="his-cloud-zuul" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.neu.his.cloud.zuul.ZuulApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Generator" />
+      <item itemvalue="Application.Generator (3)" />
+      <item itemvalue="Application.Generator (2)" />
+      <item itemvalue="Application.Generator (1)" />
+      <item itemvalue="Spring Boot.EurekaApplication" />
+      <item itemvalue="Spring Boot.ServiceSmsApplication" />
+      <item itemvalue="Spring Boot.ZuulApplication" />
+      <item itemvalue="Spring Boot.ZipkinApplication" />
+      <item itemvalue="Spring Boot.MonitorApplication" />
+      <item itemvalue="Spring Boot.ConfigApplication" />
+      <item itemvalue="Spring Boot.ServiceBmsApplication" />
+      <item itemvalue="Spring Boot.ServiceDmsApplication" />
+      <item itemvalue="Spring Boot.ServicePmsApplication" />
+      <item itemvalue="Spring Boot.ApiPcApplication" />
+      <item itemvalue="Spring Boot.ServiceSearchApplication" />
+      <item itemvalue="Spring Boot.ApiAppApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ApiAppApplication" />
+        <item itemvalue="Application.Generator (3)" />
+        <item itemvalue="Application.Generator (1)" />
+        <item itemvalue="Application.Generator (2)" />
+        <item itemvalue="Application.Generator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\lenovo-aa\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="603f0005-23a7-4a32-aade-bc9735dcb0d3" name="Default Changelist" comment="" />
+      <created>1560560043337</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560560043337</updated>
+      <workItem from="1560560045568" duration="15429000" />
+      <workItem from="1560585510377" duration="3529000" />
+      <workItem from="1560590004970" duration="1000" />
+      <workItem from="1560590013810" duration="1710000" />
+      <workItem from="1560594201580" duration="6022000" />
+      <workItem from="1560600253537" duration="9854000" />
+      <workItem from="1560611121743" duration="633000" />
+      <workItem from="1560645704744" duration="14575000" />
+      <workItem from="1560675345908" duration="2699000" />
+      <workItem from="1560685997629" duration="2435000" />
+      <workItem from="1560688453027" duration="2553000" />
+      <workItem from="1560695315931" duration="99000" />
+      <workItem from="1560697100869" duration="4797000" />
+      <workItem from="1560728019832" duration="29518000" />
+      <workItem from="1560773856116" duration="9823000" />
+      <workItem from="1560907967727" duration="2021000" />
+      <workItem from="1560989347624" duration="613000" />
+      <workItem from="1561007477468" duration="2237000" />
+      <workItem from="1561430240890" duration="22966000" />
+      <workItem from="1561463827392" duration="10719000" />
+      <workItem from="1561505933367" duration="2899000" />
+      <workItem from="1561512490506" duration="29358000" />
+      <workItem from="1561550638966" duration="8659000" />
+      <workItem from="1561590557443" duration="961000" />
+      <workItem from="1561593286698" duration="1951000" />
+      <workItem from="1561598266935" duration="18266000" />
+      <workItem from="1561618353209" duration="6570000" />
+      <workItem from="1561636932284" duration="6483000" />
+      <workItem from="1561648066138" duration="593000" />
+      <workItem from="1561681250742" duration="52000" />
+      <workItem from="1561687635343" duration="2593000" />
+      <workItem from="1561702264420" duration="5302000" />
+      <workItem from="1561723565025" duration="6618000" />
+      <workItem from="1561733707624" duration="4522000" />
+      <workItem from="1561762851304" duration="3472000" />
+      <workItem from="1561768164369" duration="17368000" />
+      <workItem from="1561802850816" duration="23339000" />
+      <workItem from="1561856815229" duration="41530000" />
+      <workItem from="1561937486907" duration="2044000" />
+      <workItem from="1561946602180" duration="10734000" />
+      <workItem from="1562030051862" duration="9214000" />
+      <workItem from="1562068406454" duration="4689000" />
+      <workItem from="1562116371665" duration="19490000" />
+      <workItem from="1562164155620" duration="4299000" />
+      <workItem from="1562198373706" duration="1557000" />
+      <workItem from="1562202903301" duration="21490000" />
+      <workItem from="1562241165895" duration="1257000" />
+      <workItem from="1562289432361" duration="323000" />
+      <workItem from="1562373913741" duration="481000" />
+      <workItem from="1562374665046" duration="1708000" />
+      <workItem from="1562858415376" duration="647000" />
+      <workItem from="1562949204672" duration="494000" />
+      <workItem from="1563367070144" duration="16000" />
+    </task>
+    <task id="LOCAL-00001" summary="init repo">
+      <created>1560604155728</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560604155728</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init repo">
+      <created>1560604392029</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560604392029</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init repo">
+      <created>1560604634223</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1560604634223</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init repo">
+      <created>1560606294357</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1560606294357</updated>
+    </task>
+    <task id="LOCAL-00005" summary="init repo">
+      <created>1560606974392</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560606974392</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init repo">
+      <created>1560608727281</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560608727281</updated>
+    </task>
+    <task id="LOCAL-00007" summary="init repo">
+      <created>1560648499363</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560648499363</updated>
+    </task>
+    <task id="LOCAL-00008" summary="init repo">
+      <created>1560651097640</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1560651097640</updated>
+    </task>
+    <task id="LOCAL-00009" summary="init repo">
+      <created>1560651949811</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560651949811</updated>
+    </task>
+    <task id="LOCAL-00010" summary="init repo">
+      <created>1560654332575</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560654332575</updated>
+    </task>
+    <task id="LOCAL-00011" summary="init repo">
+      <created>1560654466867</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1560654466867</updated>
+    </task>
+    <task id="LOCAL-00012" summary="init repo">
+      <created>1560655091150</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560655091150</updated>
+    </task>
+    <task id="LOCAL-00013" summary="init repo">
+      <created>1560655153961</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560655153961</updated>
+    </task>
+    <task id="LOCAL-00014" summary="init repo">
+      <created>1560655552794</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560655552794</updated>
+    </task>
+    <task id="LOCAL-00015" summary="init repo">
+      <created>1560671965658</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1560671965658</updated>
+    </task>
+    <task id="LOCAL-00016" summary="init repo">
+      <created>1560672129885</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1560672129885</updated>
+    </task>
+    <task id="LOCAL-00017" summary="init repo">
+      <created>1560673059922</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560673059922</updated>
+    </task>
+    <task id="LOCAL-00018" summary="init repo">
+      <created>1560673343069</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1560673343069</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="SmsStaffServiceImplTest_register - 2019.06.17 at 16h 14m 49s.xml">
+      <configuration name="SmsStaffServiceImplTest.register" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmsStaffServiceImplTest_register - 2019.06.17 at 16h 18m 08s.xml">
+      <configuration name="SmsStaffServiceImplTest.register" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmsStaffServiceImplTest_register - 2019.06.17 at 16h 29m 30s.xml">
+      <configuration name="SmsStaffServiceImplTest.register" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmsStaffServiceImplTest_register - 2019.06.17 at 16h 30m 37s.xml">
+      <configuration name="SmsStaffServiceImplTest.register" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmsStaffServiceImplTest_login - 2019.06.17 at 16h 32m 24s.xml">
+      <configuration name="SmsStaffServiceImplTest.login" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmsStaffServiceImplTest_login - 2019.06.17 at 16h 33m 33s.xml">
+      <configuration name="SmsStaffServiceImplTest.login" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmsStaffServiceImplTest_register - 2019.06.17 at 18h 30m 49s.xml">
+      <configuration name="SmsStaffServiceImplTest.register" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmsStaffServiceImplTest_register - 2019.06.17 at 18h 56m 47s.xml">
+      <configuration name="SmsStaffServiceImplTest.register" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmsStaffServiceImplTest_register - 2019.06.17 at 18h 57m 26s.xml">
+      <configuration name="SmsStaffServiceImplTest.register" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SmsStaffServiceImplTest_register - 2019.06.17 at 19h 00m 31s.xml">
+      <configuration name="SmsStaffServiceImplTest.register" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="401212000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.2646421" visible="true" weight="0.18632708" />
+      <window_info id="Structure" order="1" sideWeight="0.34893617" side_tool="true" weight="0.4495159" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" sideWeight="0.81884056" side_tool="true" weight="0.21179625" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" sideWeight="0.73535794" side_tool="true" weight="0.27882037" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8914209" weight="0.30311614" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.71313673" weight="0.7776204" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.112600535" side_tool="true" weight="0.5566572" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49396783" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49731904" weight="0.7974504" />
+      <window_info anchor="bottom" id="JRebel Executor" order="14" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.111930296" side_tool="true" weight="0.6954674" />
+      <window_info anchor="bottom" id="Messages" order="16" sideWeight="0.308311" weight="0.2407932" />
+      <window_info anchor="bottom" id="Run Dashboard" order="17" sideWeight="0.88739944" visible="true" weight="0.19263457" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24896266" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" weight="0.3297587" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.802213" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3297587" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.18115942" visible="true" weight="0.37399465" />
+      <window_info id="Structure" order="1" sideWeight="0.34893617" side_tool="true" weight="0.4495159" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" sideWeight="0.81884056" side_tool="true" weight="0.21179625" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8914209" weight="0.38243628" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.713807" weight="0.48866856" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.09383378" side_tool="true" weight="0.23229462" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49396783" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49731904" weight="0.7974504" />
+      <window_info anchor="bottom" id="JRebel Executor" order="14" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.111930296" side_tool="true" weight="0.6954674" />
+      <window_info anchor="bottom" id="Messages" order="16" sideWeight="0.308311" weight="0.4362606" />
+      <window_info anchor="bottom" id="Run Dashboard" order="17" sideWeight="0.8880697" visible="true" weight="0.04249292" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24896266" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" weight="0.3297587" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.111930296" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="init repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="init repo" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/distribution/api/pc/sms/ApiPcSmsEchartsDistributionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/controller/sms/SmsEchartsDistributionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="62" column="92" selection-start-line="62" selection-start-column="92" selection-end-line="62" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/service/sms/SmsEchartsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="37" column="86" selection-start-line="37" selection-start-column="86" selection-end-line="37" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-sms/src/main/java/com/neu/his/cloud/service/sms/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-sms/src/main/java/com/neu/his/cloud/service/sms/controller/SmsWorkloadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/controller/sms/SmsEchartsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/controller/dms/DmsCaseModelDistributionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/dto/dms/DmsDrugModelParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/controller/dms/DmsDrugModelDistributionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="56" column="95" lean-forward="true" selection-start-line="56" selection-start-column="95" selection-end-line="56" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-sms/src/main/java/com/neu/his/cloud/service/sms/controller/SmsEchartsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/service/bms/BmsFeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="33" column="74" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-bms/src/main/java/com/neu/his/cloud/service/bms/model/BmsInvoiceRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-437">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#2287#2288#0" expanded="true" />
+            <element signature="e#2318#2319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar!/org/springframework/util/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/controller/bms/BmsFeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/controller/DmsDrugStoreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="34" column="73" lean-forward="true" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/controller/DmsMedicinePrescriptionRecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="70" column="51" selection-start-line="70" selection-start-column="51" selection-end-line="70" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/model/DmsMedicineItemRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/model/DmsMedicinePrescriptionRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/service/impl/DmsMedicinePrescriptionRecordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="156" column="29" lean-forward="true" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/controller/DmsHerbalPrescriptionRecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="69" column="55" lean-forward="true" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
+          <folding>
+            <element signature="e#1195#1228#0" />
+            <element signature="method#apply#0;class#DmsHerbalPrescriptionRecordController#0" />
+            <element signature="method#invalid#0;class#DmsHerbalPrescriptionRecordController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/model/DmsMedicineItemRecordExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsHerbalPrescriptionRecordParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/controller/DmsMechanicItemRecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsMechanicItemRecordResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsMedicinePrescriptionRecordResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsHerbalPrescriptionRecordResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/dto/dms/DmsHerbalItemRecordResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsHerbalItemRecordResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/dto/dms/DmsMedicineItemRecordResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-175">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/dto/dms/DmsMedicineItemRecordResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="44" column="3" lean-forward="true" selection-start-line="44" selection-start-column="3" selection-end-line="44" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/dto/dms/DmsMedicineItemRecordResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/dto/dms/DmsHerbalItemRecordResult.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/service/impl/DmsDrugStoreServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="351" column="87" lean-forward="true" selection-start-line="351" selection-start-column="87" selection-end-line="351" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-bms/src/main/java/com/neu/his/cloud/service/bms/service/impl/BmsFeeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="533" selection-start-line="533" selection-end-line="533" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-bms/src/main/java/com/neu/his/cloud/service/bms/service/BmsFeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-bms/src/main/java/com/neu/his/cloud/service/bms/model/DmsHerbalItemRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-monitor/src/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-eureka/src/main/java/com/neu/his/cloud/eureka/EurekaApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-eureka/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-bms/src/main/java/com/neu/his/cloud/service/bms/controller/BmsFeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/resources/generator.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-zuul/src/main/java/com/neu/his/cloud/zuul/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-sms/src/main/java/com/neu/his/cloud/service/sms/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-pms/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-pms/src/main/java/com/neu/his/cloud/service/pms/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1041">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-dms/src/main/java/com/neu/his/cloud/service/dms/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-service-bms/src/main/java/com/neu/his/cloud/service/bms/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-api-app/src/main/java/com/neu/his/cloud/api/app/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/his-cloud-api-pc/src/main/java/com/neu/his/cloud/api/pc/config/Swagger2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="56" column="57" selection-start-line="56" selection-start-column="57" selection-end-line="56" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>his-cloud-api-pc</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

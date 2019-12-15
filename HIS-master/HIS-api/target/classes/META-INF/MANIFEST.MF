@@ -1,0 +1,91 @@
+Manifest-Version: 1.0
+Class-Path: libs/pagehelper-5.1.8.jar libs/lucene-spatial-7.4.0.jar li
+ bs/elasticsearch-6.4.3.jar libs/spring-boot-starter-json-2.1.3.RELEAS
+ E.jar libs/spring-boot-starter-web-2.1.3.RELEASE.jar libs/jackson-cor
+ e-lgpl-1.9.6.jar libs/springfox-swagger-common-2.7.0.jar libs/spring-
+ boot-starter-actuator-2.1.3.RELEASE.jar libs/druid-spring-boot-starte
+ r-1.1.10.jar libs/spring-context-support-5.1.5.RELEASE.jar libs/nacos
+ -common-0.2.1-RC1.jar libs/reflections-0.9.11.jar libs/jackson-dataty
+ pe-jdk8-2.9.8.jar libs/jackson-datatype-jsr310-2.9.8.jar libs/jboss-l
+ ogging-3.3.2.Final.jar libs/snakeyaml-1.23.jar libs/joda-time-2.10.1.
+ jar libs/reactive-streams-1.0.2.jar libs/lombok-1.18.6.jar libs/Hikar
+ iCP-3.2.0.jar libs/spring-boot-starter-aop-2.1.3.RELEASE.jar libs/myb
+ atis-spring-1.3.2.jar libs/nacos-spring-context-0.2.2-RC1.jar libs/sp
+ ring-security-core-5.1.4.RELEASE.jar libs/jsqlparser-1.2.jar libs/luc
+ ene-highlighter-7.4.0.jar libs/logback-classic-1.2.3.jar libs/spring-
+ boot-starter-data-elasticsearch-2.1.3.RELEASE.jar libs/commons-loggin
+ g-1.1.1.jar libs/mapstruct-1.1.0.Final.jar libs/amqp-client-5.4.3.jar
+  libs/springfox-swagger-ui-2.7.0.jar libs/springfox-spi-2.7.0.jar lib
+ s/spring-boot-actuator-autoconfigure-2.1.3.RELEASE.jar libs/springfox
+ -swagger2-2.7.0.jar libs/spring-messaging-5.1.5.RELEASE.jar libs/spri
+ ng-boot-actuator-2.1.3.RELEASE.jar libs/log4j-to-slf4j-2.11.2.jar lib
+ s/reactor-core-3.2.6.RELEASE.jar libs/commons-lang-2.5.jar libs/lucen
+ e-suggest-7.4.0.jar libs/lucene-join-7.4.0.jar libs/json-lib-2.4-jdk1
+ 5.jar libs/spring-tx-5.1.5.RELEASE.jar libs/spring-retry-1.2.4.RELEAS
+ E.jar libs/commons-io-2.2.jar libs/pagehelper-spring-boot-starter-1.2
+ .10.jar libs/spring-amqp-2.1.4.RELEASE.jar libs/rank-eval-client-6.4.
+ 3.jar libs/lucene-queryparser-7.4.0.jar libs/percolator-client-6.4.3.
+ jar libs/hppc-0.7.1.jar libs/netty-resolver-4.1.33.Final.jar libs/net
+ ty-common-4.1.33.Final.jar libs/slf4j-api-1.7.25.jar libs/classmate-1
+ .4.0.jar libs/spring-boot-starter-logging-2.1.3.RELEASE.jar libs/nett
+ y-buffer-4.1.33.Final.jar libs/spring-expression-5.1.5.RELEASE.jar li
+ bs/nacos-api-0.2.1-RC1.jar libs/validation-api-2.0.1.Final.jar libs/t
+ omcat-embed-core-9.0.16.jar libs/spring-boot-2.1.3.RELEASE.jar libs/L
+ atencyUtils-2.0.3.jar libs/lucene-spatial3d-7.4.0.jar libs/spring-boo
+ t-starter-jdbc-2.1.3.RELEASE.jar libs/spring-boot-starter-tomcat-2.1.
+ 3.RELEASE.jar libs/spring-security-web-5.1.4.RELEASE.jar libs/spring-
+ core-5.1.5.RELEASE.jar libs/HdrHistogram-2.1.9.jar libs/spring-boot-d
+ evtools-2.1.3.RELEASE.jar libs/elasticsearch-cli-6.4.3.jar libs/reind
+ ex-client-6.4.3.jar libs/swagger-models-1.5.13.jar libs/nacos-config-
+ spring-boot-starter-0.2.1.jar libs/nacos-config-spring-boot-autoconfi
+ gure-0.2.1.jar libs/byte-buddy-1.9.10.jar libs/elasticsearch-secure-s
+ m-6.4.3.jar libs/netty-handler-4.1.33.Final.jar libs/aspectjweaver-1.
+ 9.2.jar libs/transport-6.4.3.jar libs/jackson-mapper-lgpl-1.9.6.jar l
+ ibs/mybatis-generator-core-1.3.3.jar libs/ezmorph-1.0.6.jar libs/lang
+ -mustache-client-6.4.3.jar libs/t-digest-3.2.jar libs/elasticsearch-r
+ est-client-6.4.3.jar libs/jopt-simple-5.0.2.jar libs/logstash-logback
+ -encoder-4.8.jar libs/spring-boot-starter-amqp-2.1.3.RELEASE.jar libs
+ /commons-codec-1.11.jar libs/elasticsearch-x-content-6.4.3.jar libs/l
+ ucene-queries-7.4.0.jar libs/logback-core-1.2.3.jar libs/guava-18.0.j
+ ar libs/mybatis-spring-boot-autoconfigure-1.3.2.jar libs/springfox-sp
+ ring-web-2.7.0.jar libs/hibernate-validator-6.0.14.Final.jar libs/spr
+ ing-security-config-5.1.4.RELEASE.jar libs/lucene-spatial-extras-7.4.
+ 0.jar libs/spring-context-support-1.0.1.jar libs/micrometer-core-1.1.
+ 3.jar libs/spring-data-commons-2.1.5.RELEASE.jar libs/spring-boot-sta
+ rter-data-redis-2.1.3.RELEASE.jar libs/jdom-1.1.jar libs/lucene-sandb
+ ox-7.4.0.jar libs/springfox-core-2.7.0.jar libs/transport-netty4-clie
+ nt-6.4.3.jar libs/mybatis-3.4.6.jar libs/jackson-module-parameter-nam
+ es-2.9.8.jar libs/tomcat-embed-websocket-9.0.16.jar libs/netty-transp
+ ort-4.1.33.Final.jar libs/jackson-dataformat-smile-2.9.8.jar libs/jna
+ -4.5.1.jar libs/httpasyncclient-4.1.4.jar libs/spring-context-5.1.5.R
+ ELEASE.jar libs/spring-beans-5.1.5.RELEASE.jar libs/spring-boot-autoc
+ onfigure-2.1.3.RELEASE.jar libs/lettuce-core-5.1.4.RELEASE.jar libs/j
+ ackson-dataformat-cbor-2.9.8.jar libs/mysql-connector-java-8.0.15.jar
+  libs/tomcat-embed-el-9.0.16.jar libs/spring-plugin-core-1.2.0.RELEAS
+ E.jar libs/jackson-dataformat-yaml-2.9.8.jar libs/jjwt-0.9.0.jar libs
+ /hutool-all-4.5.7.jar libs/spring-boot-starter-security-2.1.3.RELEASE
+ .jar libs/springfox-schema-2.7.0.jar libs/spring-jcl-5.1.5.RELEASE.ja
+ r libs/lucene-grouping-7.4.0.jar libs/lucene-backward-codecs-7.4.0.ja
+ r libs/jackson-databind-2.9.8.jar libs/httpcore-nio-4.4.11.jar libs/s
+ pring-data-redis-2.1.5.RELEASE.jar libs/spring-aop-5.1.5.RELEASE.jar 
+ libs/spring-webmvc-5.1.5.RELEASE.jar libs/netty-codec-http-4.1.33.Fin
+ al.jar libs/commons-collections-3.2.1.jar libs/nacos-client-0.2.1-RC1
+ .jar libs/lucene-core-7.4.0.jar libs/jackson-core-2.9.8.jar libs/fast
+ json-1.2.47.jar libs/spring-plugin-metadata-1.2.0.RELEASE.jar libs/ja
+ ckson-annotations-2.9.0.jar libs/log4j-api-2.11.2.jar libs/spring-boo
+ t-starter-2.1.3.RELEASE.jar libs/mybatis-spring-boot-starter-1.3.2.ja
+ r libs/lucene-analyzers-common-7.4.0.jar libs/spring-jdbc-5.1.5.RELEA
+ SE.jar libs/httpclient-4.5.7.jar libs/aliyun-sdk-oss-2.5.0.jar libs/n
+ acos-spring-boot-base-0.2.1.jar libs/javax.annotation-api-1.3.2.jar l
+ ibs/elasticsearch-core-6.4.3.jar libs/druid-1.1.10.jar libs/lucene-me
+ mory-7.4.0.jar libs/pagehelper-spring-boot-autoconfigure-1.2.10.jar l
+ ibs/httpcore-4.4.11.jar libs/lucene-misc-7.4.0.jar libs/commons-lang3
+ -3.8.1.jar libs/spring-data-keyvalue-2.1.5.RELEASE.jar libs/spring-we
+ b-5.1.5.RELEASE.jar libs/swagger-annotations-1.5.13.jar libs/spring-d
+ ata-elasticsearch-3.1.5.RELEASE.jar libs/netty-codec-4.1.33.Final.jar
+  libs/javassist-3.21.0-GA.jar libs/parent-join-client-6.4.3.jar libs/
+ commons-beanutils-1.8.0.jar libs/compiler-0.9.3.jar libs/spring-oxm-5
+ .1.5.RELEASE.jar libs/jul-to-slf4j-1.7.25.jar libs/spring-rabbit-2.1.
+ 4.RELEASE.jar
+Main-Class: com.neu.his.HisApiApplication
+

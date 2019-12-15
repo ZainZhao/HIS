@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/his-cloud.iml" filepath="$PROJECT_DIR$/.idea/his-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-api-app/his-cloud-api-app.iml" filepath="$PROJECT_DIR$/his-cloud-api-app/his-cloud-api-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-api-pc/his-cloud-api-pc.iml" filepath="$PROJECT_DIR$/his-cloud-api-pc/his-cloud-api-pc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-config/his-cloud-config.iml" filepath="$PROJECT_DIR$/his-cloud-config/his-cloud-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-dependencies/his-cloud-dependencies.iml" filepath="$PROJECT_DIR$/his-cloud-dependencies/his-cloud-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-eureka/his-cloud-eureka.iml" filepath="$PROJECT_DIR$/his-cloud-eureka/his-cloud-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-monitor/his-cloud-monitor.iml" filepath="$PROJECT_DIR$/his-cloud-monitor/his-cloud-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-service-bms/his-cloud-service-bms.iml" filepath="$PROJECT_DIR$/his-cloud-service-bms/his-cloud-service-bms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-service-dms/his-cloud-service-dms.iml" filepath="$PROJECT_DIR$/his-cloud-service-dms/his-cloud-service-dms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-service-pms/his-cloud-service-pms.iml" filepath="$PROJECT_DIR$/his-cloud-service-pms/his-cloud-service-pms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-service-sms/his-cloud-service-sms.iml" filepath="$PROJECT_DIR$/his-cloud-service-sms/his-cloud-service-sms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-zipkin/his-cloud-zipkin.iml" filepath="$PROJECT_DIR$/his-cloud-zipkin/his-cloud-zipkin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/his-cloud-zuul/his-cloud-zuul.iml" filepath="$PROJECT_DIR$/his-cloud-zuul/his-cloud-zuul.iml" />
+    </modules>
+  </component>
+</project>

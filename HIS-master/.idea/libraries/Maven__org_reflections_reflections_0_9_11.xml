@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.reflections:reflections:0.9.11">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.m2/repository/org/reflections/reflections/0.9.11/reflections-0.9.11.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.m2/repository/org/reflections/reflections/0.9.11/reflections-0.9.11-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.m2/repository/org/reflections/reflections/0.9.11/reflections-0.9.11-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

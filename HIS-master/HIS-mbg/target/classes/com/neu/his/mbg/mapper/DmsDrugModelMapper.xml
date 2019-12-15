@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.mbg.mapper.DmsDrugModelMapper">
+  <resultMap id="BaseResultMap" type="com.neu.his.mbg.model.DmsDrugModel">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="scope" jdbcType="INTEGER" property="scope" />
+    <result column="own_id" jdbcType="BIGINT" property="ownId" />
+    <result column="aim" jdbcType="VARCHAR" property="aim" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="pair_num" jdbcType="BIGINT" property="pairNum" />
+    <result column="frequency" jdbcType="INTEGER" property="frequency" />
+    <result column="therapy" jdbcType="VARCHAR" property="therapy" />
+    <result column="therapy_details" jdbcType="VARCHAR" property="therapyDetails" />
+    <result column="medical_advice" jdbcType="VARCHAR" property="medicalAdvice" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, status, name, scope, own_id, aim, create_time, code, type, pair_num, frequency, 
+    therapy, therapy_details, medical_advice
+  </sql>
+  <select id="selectByExample" parameterType="com.neu.his.mbg.model.DmsDrugModelExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dms_drug_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dms_drug_model
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from dms_drug_model
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neu.his.mbg.model.DmsDrugModelExample">
+    delete from dms_drug_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.neu.his.mbg.model.DmsDrugModel">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_drug_model (status, name, scope, 
+      own_id, aim, create_time, 
+      code, type, pair_num, 
+      frequency, therapy, therapy_details, 
+      medical_advice)
+    values (#{status,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{scope,jdbcType=INTEGER}, 
+      #{ownId,jdbcType=BIGINT}, #{aim,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{code,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{pairNum,jdbcType=BIGINT}, 
+      #{frequency,jdbcType=INTEGER}, #{therapy,jdbcType=VARCHAR}, #{therapyDetails,jdbcType=VARCHAR}, 
+      #{medicalAdvice,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.neu.his.mbg.model.DmsDrugModel">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_drug_model
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="status != null">
+        status,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="scope != null">
+        scope,
+      </if>
+      <if test="ownId != null">
+        own_id,
+      </if>
+      <if test="aim != null">
+        aim,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="pairNum != null">
+        pair_num,
+      </if>
+      <if test="frequency != null">
+        frequency,
+      </if>
+      <if test="therapy != null">
+        therapy,
+      </if>
+      <if test="therapyDetails != null">
+        therapy_details,
+      </if>
+      <if test="medicalAdvice != null">
+        medical_advice,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="scope != null">
+        #{scope,jdbcType=INTEGER},
+      </if>
+      <if test="ownId != null">
+        #{ownId,jdbcType=BIGINT},
+      </if>
+      <if test="aim != null">
+        #{aim,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="pairNum != null">
+        #{pairNum,jdbcType=BIGINT},
+      </if>
+      <if test="frequency != null">
+        #{frequency,jdbcType=INTEGER},
+      </if>
+      <if test="therapy != null">
+        #{therapy,jdbcType=VARCHAR},
+      </if>
+      <if test="therapyDetails != null">
+        #{therapyDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="medicalAdvice != null">
+        #{medicalAdvice,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neu.his.mbg.model.DmsDrugModelExample" resultType="java.lang.Integer">
+    select count(*) from dms_drug_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dms_drug_model
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.scope != null">
+        scope = #{record.scope,jdbcType=INTEGER},
+      </if>
+      <if test="record.ownId != null">
+        own_id = #{record.ownId,jdbcType=BIGINT},
+      </if>
+      <if test="record.aim != null">
+        aim = #{record.aim,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.code != null">
+        code = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=INTEGER},
+      </if>
+      <if test="record.pairNum != null">
+        pair_num = #{record.pairNum,jdbcType=BIGINT},
+      </if>
+      <if test="record.frequency != null">
+        frequency = #{record.frequency,jdbcType=INTEGER},
+      </if>
+      <if test="record.therapy != null">
+        therapy = #{record.therapy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.therapyDetails != null">
+        therapy_details = #{record.therapyDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="record.medicalAdvice != null">
+        medical_advice = #{record.medicalAdvice,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dms_drug_model
+    set id = #{record.id,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      scope = #{record.scope,jdbcType=INTEGER},
+      own_id = #{record.ownId,jdbcType=BIGINT},
+      aim = #{record.aim,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      code = #{record.code,jdbcType=VARCHAR},
+      type = #{record.type,jdbcType=INTEGER},
+      pair_num = #{record.pairNum,jdbcType=BIGINT},
+      frequency = #{record.frequency,jdbcType=INTEGER},
+      therapy = #{record.therapy,jdbcType=VARCHAR},
+      therapy_details = #{record.therapyDetails,jdbcType=VARCHAR},
+      medical_advice = #{record.medicalAdvice,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neu.his.mbg.model.DmsDrugModel">
+    update dms_drug_model
+    <set>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="scope != null">
+        scope = #{scope,jdbcType=INTEGER},
+      </if>
+      <if test="ownId != null">
+        own_id = #{ownId,jdbcType=BIGINT},
+      </if>
+      <if test="aim != null">
+        aim = #{aim,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="pairNum != null">
+        pair_num = #{pairNum,jdbcType=BIGINT},
+      </if>
+      <if test="frequency != null">
+        frequency = #{frequency,jdbcType=INTEGER},
+      </if>
+      <if test="therapy != null">
+        therapy = #{therapy,jdbcType=VARCHAR},
+      </if>
+      <if test="therapyDetails != null">
+        therapy_details = #{therapyDetails,jdbcType=VARCHAR},
+      </if>
+      <if test="medicalAdvice != null">
+        medical_advice = #{medicalAdvice,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neu.his.mbg.model.DmsDrugModel">
+    update dms_drug_model
+    set status = #{status,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      scope = #{scope,jdbcType=INTEGER},
+      own_id = #{ownId,jdbcType=BIGINT},
+      aim = #{aim,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      code = #{code,jdbcType=VARCHAR},
+      type = #{type,jdbcType=INTEGER},
+      pair_num = #{pairNum,jdbcType=BIGINT},
+      frequency = #{frequency,jdbcType=INTEGER},
+      therapy = #{therapy,jdbcType=VARCHAR},
+      therapy_details = #{therapyDetails,jdbcType=VARCHAR},
+      medical_advice = #{medicalAdvice,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

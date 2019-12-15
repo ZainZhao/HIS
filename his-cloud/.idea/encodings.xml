@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/his-cloud-api-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-api-app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-api-pc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-dependencies" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-monitor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-service-bms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-service-dms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-service-pms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-service-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-service-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-service-sms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-zipkin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/his-cloud-zuul" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

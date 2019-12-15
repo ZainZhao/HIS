@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.cloud.zuul.mapper.DmsMedicineItemRecordMapper">
+  <resultMap id="BaseResultMap" type="com.neu.his.cloud.zuul.model.DmsMedicineItemRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="drug_id" jdbcType="BIGINT" property="drugId" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="prescription_id" jdbcType="BIGINT" property="prescriptionId" />
+    <result column="medicine_usage" jdbcType="INTEGER" property="medicineUsage" />
+    <result column="frequency" jdbcType="INTEGER" property="frequency" />
+    <result column="days" jdbcType="BIGINT" property="days" />
+    <result column="num" jdbcType="BIGINT" property="num" />
+    <result column="medical_advice" jdbcType="VARCHAR" property="medicalAdvice" />
+    <result column="refund_num" jdbcType="BIGINT" property="refundNum" />
+    <result column="usage_num" jdbcType="BIGINT" property="usageNum" />
+    <result column="usage_means" jdbcType="INTEGER" property="usageMeans" />
+    <result column="usage_num_unit" jdbcType="INTEGER" property="usageNumUnit" />
+    <result column="current_num" jdbcType="BIGINT" property="currentNum" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, drug_id, status, prescription_id, medicine_usage, frequency, days, num, medical_advice, 
+    refund_num, usage_num, usage_means, usage_num_unit, current_num
+  </sql>
+  <select id="selectByExample" parameterType="com.neu.his.cloud.zuul.model.DmsMedicineItemRecordExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dms_medicine_item_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dms_medicine_item_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from dms_medicine_item_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neu.his.cloud.zuul.model.DmsMedicineItemRecordExample">
+    delete from dms_medicine_item_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.neu.his.cloud.zuul.model.DmsMedicineItemRecord">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_medicine_item_record (drug_id, status, prescription_id, 
+      medicine_usage, frequency, days, 
+      num, medical_advice, refund_num, 
+      usage_num, usage_means, usage_num_unit, 
+      current_num)
+    values (#{drugId,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, #{prescriptionId,jdbcType=BIGINT}, 
+      #{medicineUsage,jdbcType=INTEGER}, #{frequency,jdbcType=INTEGER}, #{days,jdbcType=BIGINT}, 
+      #{num,jdbcType=BIGINT}, #{medicalAdvice,jdbcType=VARCHAR}, #{refundNum,jdbcType=BIGINT}, 
+      #{usageNum,jdbcType=BIGINT}, #{usageMeans,jdbcType=INTEGER}, #{usageNumUnit,jdbcType=INTEGER}, 
+      #{currentNum,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.neu.his.cloud.zuul.model.DmsMedicineItemRecord">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_medicine_item_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="drugId != null">
+        drug_id,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="prescriptionId != null">
+        prescription_id,
+      </if>
+      <if test="medicineUsage != null">
+        medicine_usage,
+      </if>
+      <if test="frequency != null">
+        frequency,
+      </if>
+      <if test="days != null">
+        days,
+      </if>
+      <if test="num != null">
+        num,
+      </if>
+      <if test="medicalAdvice != null">
+        medical_advice,
+      </if>
+      <if test="refundNum != null">
+        refund_num,
+      </if>
+      <if test="usageNum != null">
+        usage_num,
+      </if>
+      <if test="usageMeans != null">
+        usage_means,
+      </if>
+      <if test="usageNumUnit != null">
+        usage_num_unit,
+      </if>
+      <if test="currentNum != null">
+        current_num,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="drugId != null">
+        #{drugId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="prescriptionId != null">
+        #{prescriptionId,jdbcType=BIGINT},
+      </if>
+      <if test="medicineUsage != null">
+        #{medicineUsage,jdbcType=INTEGER},
+      </if>
+      <if test="frequency != null">
+        #{frequency,jdbcType=INTEGER},
+      </if>
+      <if test="days != null">
+        #{days,jdbcType=BIGINT},
+      </if>
+      <if test="num != null">
+        #{num,jdbcType=BIGINT},
+      </if>
+      <if test="medicalAdvice != null">
+        #{medicalAdvice,jdbcType=VARCHAR},
+      </if>
+      <if test="refundNum != null">
+        #{refundNum,jdbcType=BIGINT},
+      </if>
+      <if test="usageNum != null">
+        #{usageNum,jdbcType=BIGINT},
+      </if>
+      <if test="usageMeans != null">
+        #{usageMeans,jdbcType=INTEGER},
+      </if>
+      <if test="usageNumUnit != null">
+        #{usageNumUnit,jdbcType=INTEGER},
+      </if>
+      <if test="currentNum != null">
+        #{currentNum,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neu.his.cloud.zuul.model.DmsMedicineItemRecordExample" resultType="java.lang.Integer">
+    select count(*) from dms_medicine_item_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dms_medicine_item_record
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.drugId != null">
+        drug_id = #{record.drugId,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.prescriptionId != null">
+        prescription_id = #{record.prescriptionId,jdbcType=BIGINT},
+      </if>
+      <if test="record.medicineUsage != null">
+        medicine_usage = #{record.medicineUsage,jdbcType=INTEGER},
+      </if>
+      <if test="record.frequency != null">
+        frequency = #{record.frequency,jdbcType=INTEGER},
+      </if>
+      <if test="record.days != null">
+        days = #{record.days,jdbcType=BIGINT},
+      </if>
+      <if test="record.num != null">
+        num = #{record.num,jdbcType=BIGINT},
+      </if>
+      <if test="record.medicalAdvice != null">
+        medical_advice = #{record.medicalAdvice,jdbcType=VARCHAR},
+      </if>
+      <if test="record.refundNum != null">
+        refund_num = #{record.refundNum,jdbcType=BIGINT},
+      </if>
+      <if test="record.usageNum != null">
+        usage_num = #{record.usageNum,jdbcType=BIGINT},
+      </if>
+      <if test="record.usageMeans != null">
+        usage_means = #{record.usageMeans,jdbcType=INTEGER},
+      </if>
+      <if test="record.usageNumUnit != null">
+        usage_num_unit = #{record.usageNumUnit,jdbcType=INTEGER},
+      </if>
+      <if test="record.currentNum != null">
+        current_num = #{record.currentNum,jdbcType=BIGINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dms_medicine_item_record
+    set id = #{record.id,jdbcType=BIGINT},
+      drug_id = #{record.drugId,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=INTEGER},
+      prescription_id = #{record.prescriptionId,jdbcType=BIGINT},
+      medicine_usage = #{record.medicineUsage,jdbcType=INTEGER},
+      frequency = #{record.frequency,jdbcType=INTEGER},
+      days = #{record.days,jdbcType=BIGINT},
+      num = #{record.num,jdbcType=BIGINT},
+      medical_advice = #{record.medicalAdvice,jdbcType=VARCHAR},
+      refund_num = #{record.refundNum,jdbcType=BIGINT},
+      usage_num = #{record.usageNum,jdbcType=BIGINT},
+      usage_means = #{record.usageMeans,jdbcType=INTEGER},
+      usage_num_unit = #{record.usageNumUnit,jdbcType=INTEGER},
+      current_num = #{record.currentNum,jdbcType=BIGINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neu.his.cloud.zuul.model.DmsMedicineItemRecord">
+    update dms_medicine_item_record
+    <set>
+      <if test="drugId != null">
+        drug_id = #{drugId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="prescriptionId != null">
+        prescription_id = #{prescriptionId,jdbcType=BIGINT},
+      </if>
+      <if test="medicineUsage != null">
+        medicine_usage = #{medicineUsage,jdbcType=INTEGER},
+      </if>
+      <if test="frequency != null">
+        frequency = #{frequency,jdbcType=INTEGER},
+      </if>
+      <if test="days != null">
+        days = #{days,jdbcType=BIGINT},
+      </if>
+      <if test="num != null">
+        num = #{num,jdbcType=BIGINT},
+      </if>
+      <if test="medicalAdvice != null">
+        medical_advice = #{medicalAdvice,jdbcType=VARCHAR},
+      </if>
+      <if test="refundNum != null">
+        refund_num = #{refundNum,jdbcType=BIGINT},
+      </if>
+      <if test="usageNum != null">
+        usage_num = #{usageNum,jdbcType=BIGINT},
+      </if>
+      <if test="usageMeans != null">
+        usage_means = #{usageMeans,jdbcType=INTEGER},
+      </if>
+      <if test="usageNumUnit != null">
+        usage_num_unit = #{usageNumUnit,jdbcType=INTEGER},
+      </if>
+      <if test="currentNum != null">
+        current_num = #{currentNum,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neu.his.cloud.zuul.model.DmsMedicineItemRecord">
+    update dms_medicine_item_record
+    set drug_id = #{drugId,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      prescription_id = #{prescriptionId,jdbcType=BIGINT},
+      medicine_usage = #{medicineUsage,jdbcType=INTEGER},
+      frequency = #{frequency,jdbcType=INTEGER},
+      days = #{days,jdbcType=BIGINT},
+      num = #{num,jdbcType=BIGINT},
+      medical_advice = #{medicalAdvice,jdbcType=VARCHAR},
+      refund_num = #{refundNum,jdbcType=BIGINT},
+      usage_num = #{usageNum,jdbcType=BIGINT},
+      usage_means = #{usageMeans,jdbcType=INTEGER},
+      usage_num_unit = #{usageNumUnit,jdbcType=INTEGER},
+      current_num = #{currentNum,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

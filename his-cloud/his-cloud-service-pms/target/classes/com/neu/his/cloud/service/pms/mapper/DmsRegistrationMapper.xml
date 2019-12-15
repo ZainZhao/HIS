@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.cloud.service.pms.mapper.DmsRegistrationMapper">
+  <resultMap id="BaseResultMap" type="com.neu.his.cloud.service.pms.model.DmsRegistration">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="patient_id" jdbcType="BIGINT" property="patientId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="end_attendance" jdbcType="INTEGER" property="endAttendance" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="skd_id" jdbcType="BIGINT" property="skdId" />
+    <result column="need_book" jdbcType="INTEGER" property="needBook" />
+    <result column="bind_status" jdbcType="INTEGER" property="bindStatus" />
+    <result column="dept_id" jdbcType="BIGINT" property="deptId" />
+    <result column="attendance_date" jdbcType="TIMESTAMP" property="attendanceDate" />
+    <result column="patient_age_str" jdbcType="VARCHAR" property="patientAgeStr" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, patient_id, create_time, end_attendance, status, skd_id, need_book, bind_status, 
+    dept_id, attendance_date, patient_age_str
+  </sql>
+  <select id="selectByExample" parameterType="com.neu.his.cloud.service.pms.model.DmsRegistrationExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dms_registration
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dms_registration
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from dms_registration
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neu.his.cloud.service.pms.model.DmsRegistrationExample">
+    delete from dms_registration
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.neu.his.cloud.service.pms.model.DmsRegistration">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_registration (patient_id, create_time, end_attendance, 
+      status, skd_id, need_book, 
+      bind_status, dept_id, attendance_date, 
+      patient_age_str)
+    values (#{patientId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{endAttendance,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER}, #{skdId,jdbcType=BIGINT}, #{needBook,jdbcType=INTEGER}, 
+      #{bindStatus,jdbcType=INTEGER}, #{deptId,jdbcType=BIGINT}, #{attendanceDate,jdbcType=TIMESTAMP}, 
+      #{patientAgeStr,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.neu.his.cloud.service.pms.model.DmsRegistration">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_registration
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="patientId != null">
+        patient_id,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="endAttendance != null">
+        end_attendance,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="skdId != null">
+        skd_id,
+      </if>
+      <if test="needBook != null">
+        need_book,
+      </if>
+      <if test="bindStatus != null">
+        bind_status,
+      </if>
+      <if test="deptId != null">
+        dept_id,
+      </if>
+      <if test="attendanceDate != null">
+        attendance_date,
+      </if>
+      <if test="patientAgeStr != null">
+        patient_age_str,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="patientId != null">
+        #{patientId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endAttendance != null">
+        #{endAttendance,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="skdId != null">
+        #{skdId,jdbcType=BIGINT},
+      </if>
+      <if test="needBook != null">
+        #{needBook,jdbcType=INTEGER},
+      </if>
+      <if test="bindStatus != null">
+        #{bindStatus,jdbcType=INTEGER},
+      </if>
+      <if test="deptId != null">
+        #{deptId,jdbcType=BIGINT},
+      </if>
+      <if test="attendanceDate != null">
+        #{attendanceDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="patientAgeStr != null">
+        #{patientAgeStr,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neu.his.cloud.service.pms.model.DmsRegistrationExample" resultType="java.lang.Integer">
+    select count(*) from dms_registration
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dms_registration
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.patientId != null">
+        patient_id = #{record.patientId,jdbcType=BIGINT},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.endAttendance != null">
+        end_attendance = #{record.endAttendance,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.skdId != null">
+        skd_id = #{record.skdId,jdbcType=BIGINT},
+      </if>
+      <if test="record.needBook != null">
+        need_book = #{record.needBook,jdbcType=INTEGER},
+      </if>
+      <if test="record.bindStatus != null">
+        bind_status = #{record.bindStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.deptId != null">
+        dept_id = #{record.deptId,jdbcType=BIGINT},
+      </if>
+      <if test="record.attendanceDate != null">
+        attendance_date = #{record.attendanceDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.patientAgeStr != null">
+        patient_age_str = #{record.patientAgeStr,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dms_registration
+    set id = #{record.id,jdbcType=BIGINT},
+      patient_id = #{record.patientId,jdbcType=BIGINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      end_attendance = #{record.endAttendance,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=INTEGER},
+      skd_id = #{record.skdId,jdbcType=BIGINT},
+      need_book = #{record.needBook,jdbcType=INTEGER},
+      bind_status = #{record.bindStatus,jdbcType=INTEGER},
+      dept_id = #{record.deptId,jdbcType=BIGINT},
+      attendance_date = #{record.attendanceDate,jdbcType=TIMESTAMP},
+      patient_age_str = #{record.patientAgeStr,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neu.his.cloud.service.pms.model.DmsRegistration">
+    update dms_registration
+    <set>
+      <if test="patientId != null">
+        patient_id = #{patientId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endAttendance != null">
+        end_attendance = #{endAttendance,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="skdId != null">
+        skd_id = #{skdId,jdbcType=BIGINT},
+      </if>
+      <if test="needBook != null">
+        need_book = #{needBook,jdbcType=INTEGER},
+      </if>
+      <if test="bindStatus != null">
+        bind_status = #{bindStatus,jdbcType=INTEGER},
+      </if>
+      <if test="deptId != null">
+        dept_id = #{deptId,jdbcType=BIGINT},
+      </if>
+      <if test="attendanceDate != null">
+        attendance_date = #{attendanceDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="patientAgeStr != null">
+        patient_age_str = #{patientAgeStr,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neu.his.cloud.service.pms.model.DmsRegistration">
+    update dms_registration
+    set patient_id = #{patientId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      end_attendance = #{endAttendance,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      skd_id = #{skdId,jdbcType=BIGINT},
+      need_book = #{needBook,jdbcType=INTEGER},
+      bind_status = #{bindStatus,jdbcType=INTEGER},
+      dept_id = #{deptId,jdbcType=BIGINT},
+      attendance_date = #{attendanceDate,jdbcType=TIMESTAMP},
+      patient_age_str = #{patientAgeStr,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

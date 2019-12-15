@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: his-cloud-service-bms
+  zipkin:
+    base-url: http://localhost:9411
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+  jackson:
+    time-zone: GMT+8  # 时区设置
+  datasource:
+    url: jdbc:mysql://localhost:3306/his?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+
+
+
+server:
+  port: 10007
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   #暴露所有的端点我们可以看到更多的服务实例相关信息，
+    endpoint:
+      health:
+        show-details: ALWAYS   #health endpoint是否必须显示全部细节
+
+mybatis:
+  type-aliases-package: com.neu.his.cloud.service.bms.model
+  mapper-locations: classpath:/com.neu.his.cloud.service.bms.mapper/*.xml
+
+
+logging:
+  level:
+    root: info #日志配置DEBUG,INFO,WARN,ERROR
+    com.neu.his: debug
+  file: E:/log #配置日志文件路径
+  path: demo_log_2.log #配置日志生成名称

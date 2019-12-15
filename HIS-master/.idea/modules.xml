@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HIS-api/HIS-api.iml" filepath="$PROJECT_DIR$/HIS-api/HIS-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HIS-service/HIS-bms-service/HIS-bms-service.iml" filepath="$PROJECT_DIR$/HIS-service/HIS-bms-service/HIS-bms-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HIS-common/HIS-common.iml" filepath="$PROJECT_DIR$/HIS-common/HIS-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HIS-demo/HIS-demo.iml" filepath="$PROJECT_DIR$/HIS-demo/HIS-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HIS-service/HIS-dms-service/HIS-dms-service.iml" filepath="$PROJECT_DIR$/HIS-service/HIS-dms-service/HIS-dms-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HIS-master.iml" filepath="$PROJECT_DIR$/.idea/HIS-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HIS-mbg/HIS-mbg.iml" filepath="$PROJECT_DIR$/HIS-mbg/HIS-mbg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HIS-service/HIS-pms-service/HIS-pms-service.iml" filepath="$PROJECT_DIR$/HIS-service/HIS-pms-service/HIS-pms-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HIS-service/HIS-service.iml" filepath="$PROJECT_DIR$/HIS-service/HIS-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HIS-service/HIS-sms-service/HIS-sms-service.iml" filepath="$PROJECT_DIR$/HIS-service/HIS-sms-service/HIS-sms-service.iml" />
+    </modules>
+  </component>
+</project>

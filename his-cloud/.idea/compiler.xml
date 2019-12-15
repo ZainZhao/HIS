@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="his-cloud-api-app" />
+        <module name="his-cloud-api-pc" />
+        <module name="his-cloud-config" />
+        <module name="his-cloud-eureka" />
+        <module name="his-cloud-monitor" />
+        <module name="his-cloud-service-bms" />
+        <module name="his-cloud-service-dms" />
+        <module name="his-cloud-service-pms" />
+        <module name="his-cloud-service-sms" />
+        <module name="his-cloud-zipkin" />
+        <module name="his-cloud-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="his-cloud-api-admin" target="1.8" />
+      <module name="his-cloud-api-app" target="1.8" />
+      <module name="his-cloud-api-pc" target="1.8" />
+      <module name="his-cloud-common" target="1.8" />
+      <module name="his-cloud-config" target="1.8" />
+      <module name="his-cloud-dependencies" target="1.8" />
+      <module name="his-cloud-eureka" target="1.8" />
+      <module name="his-cloud-mbg" target="1.8" />
+      <module name="his-cloud-monitor" target="1.8" />
+      <module name="his-cloud-service-bms" target="1.8" />
+      <module name="his-cloud-service-dms" target="1.8" />
+      <module name="his-cloud-service-pms" target="1.8" />
+      <module name="his-cloud-service-search" target="1.8" />
+      <module name="his-cloud-service-sms" target="1.8" />
+      <module name="his-cloud-zipkin" target="1.8" />
+      <module name="his-cloud-zool" target="1.8" />
+      <module name="his-cloud-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="his-cloud-api-admin" options="-parameters" />
+      <module name="his-cloud-api-app" options="-parameters" />
+      <module name="his-cloud-api-pc" options="-parameters" />
+      <module name="his-cloud-common" options="-parameters" />
+      <module name="his-cloud-config" options="-parameters" />
+      <module name="his-cloud-eureka" options="-parameters" />
+      <module name="his-cloud-mbg" options="-parameters" />
+      <module name="his-cloud-monitor" options="-parameters" />
+      <module name="his-cloud-service-bms" options="-parameters" />
+      <module name="his-cloud-service-dms" options="-parameters" />
+      <module name="his-cloud-service-pms" options="-parameters" />
+      <module name="his-cloud-service-search" options="-parameters" />
+      <module name="his-cloud-service-sms" options="-parameters" />
+      <module name="his-cloud-zipkin" options="-parameters" />
+      <module name="his-cloud-zool" options="-parameters" />
+      <module name="his-cloud-zuul" options="-parameters" />
+    </option>
+  </component>
+</project>

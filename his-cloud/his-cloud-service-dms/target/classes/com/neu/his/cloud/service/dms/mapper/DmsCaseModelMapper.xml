@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.cloud.service.dms.mapper.DmsCaseModelMapper">
+  <resultMap id="BaseResultMap" type="com.neu.his.cloud.service.dms.model.DmsCaseModel">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="chief_complaint" jdbcType="VARCHAR" property="chiefComplaint" />
+    <result column="history_of_present_illness" jdbcType="VARCHAR" property="historyOfPresentIllness" />
+    <result column="history_of_treatment" jdbcType="VARCHAR" property="historyOfTreatment" />
+    <result column="past_history" jdbcType="VARCHAR" property="pastHistory" />
+    <result column="allergies" jdbcType="VARCHAR" property="allergies" />
+    <result column="health_checkup" jdbcType="VARCHAR" property="healthCheckup" />
+    <result column="priliminary_dise_id_list" jdbcType="VARCHAR" property="priliminaryDiseIdList" />
+    <result column="priliminary_dise_str_list" jdbcType="VARCHAR" property="priliminaryDiseStrList" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, chief_complaint, history_of_present_illness, history_of_treatment, past_history, 
+    allergies, health_checkup, priliminary_dise_id_list, priliminary_dise_str_list, name, 
+    status
+  </sql>
+  <select id="selectByExample" parameterType="com.neu.his.cloud.service.dms.model.DmsCaseModelExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dms_case_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dms_case_model
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from dms_case_model
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neu.his.cloud.service.dms.model.DmsCaseModelExample">
+    delete from dms_case_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.neu.his.cloud.service.dms.model.DmsCaseModel">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_case_model (chief_complaint, history_of_present_illness, 
+      history_of_treatment, past_history, allergies, 
+      health_checkup, priliminary_dise_id_list, priliminary_dise_str_list, 
+      name, status)
+    values (#{chiefComplaint,jdbcType=VARCHAR}, #{historyOfPresentIllness,jdbcType=VARCHAR}, 
+      #{historyOfTreatment,jdbcType=VARCHAR}, #{pastHistory,jdbcType=VARCHAR}, #{allergies,jdbcType=VARCHAR}, 
+      #{healthCheckup,jdbcType=VARCHAR}, #{priliminaryDiseIdList,jdbcType=VARCHAR}, #{priliminaryDiseStrList,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.neu.his.cloud.service.dms.model.DmsCaseModel">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_case_model
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="chiefComplaint != null">
+        chief_complaint,
+      </if>
+      <if test="historyOfPresentIllness != null">
+        history_of_present_illness,
+      </if>
+      <if test="historyOfTreatment != null">
+        history_of_treatment,
+      </if>
+      <if test="pastHistory != null">
+        past_history,
+      </if>
+      <if test="allergies != null">
+        allergies,
+      </if>
+      <if test="healthCheckup != null">
+        health_checkup,
+      </if>
+      <if test="priliminaryDiseIdList != null">
+        priliminary_dise_id_list,
+      </if>
+      <if test="priliminaryDiseStrList != null">
+        priliminary_dise_str_list,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="chiefComplaint != null">
+        #{chiefComplaint,jdbcType=VARCHAR},
+      </if>
+      <if test="historyOfPresentIllness != null">
+        #{historyOfPresentIllness,jdbcType=VARCHAR},
+      </if>
+      <if test="historyOfTreatment != null">
+        #{historyOfTreatment,jdbcType=VARCHAR},
+      </if>
+      <if test="pastHistory != null">
+        #{pastHistory,jdbcType=VARCHAR},
+      </if>
+      <if test="allergies != null">
+        #{allergies,jdbcType=VARCHAR},
+      </if>
+      <if test="healthCheckup != null">
+        #{healthCheckup,jdbcType=VARCHAR},
+      </if>
+      <if test="priliminaryDiseIdList != null">
+        #{priliminaryDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="priliminaryDiseStrList != null">
+        #{priliminaryDiseStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neu.his.cloud.service.dms.model.DmsCaseModelExample" resultType="java.lang.Integer">
+    select count(*) from dms_case_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dms_case_model
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.chiefComplaint != null">
+        chief_complaint = #{record.chiefComplaint,jdbcType=VARCHAR},
+      </if>
+      <if test="record.historyOfPresentIllness != null">
+        history_of_present_illness = #{record.historyOfPresentIllness,jdbcType=VARCHAR},
+      </if>
+      <if test="record.historyOfTreatment != null">
+        history_of_treatment = #{record.historyOfTreatment,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pastHistory != null">
+        past_history = #{record.pastHistory,jdbcType=VARCHAR},
+      </if>
+      <if test="record.allergies != null">
+        allergies = #{record.allergies,jdbcType=VARCHAR},
+      </if>
+      <if test="record.healthCheckup != null">
+        health_checkup = #{record.healthCheckup,jdbcType=VARCHAR},
+      </if>
+      <if test="record.priliminaryDiseIdList != null">
+        priliminary_dise_id_list = #{record.priliminaryDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.priliminaryDiseStrList != null">
+        priliminary_dise_str_list = #{record.priliminaryDiseStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dms_case_model
+    set id = #{record.id,jdbcType=BIGINT},
+      chief_complaint = #{record.chiefComplaint,jdbcType=VARCHAR},
+      history_of_present_illness = #{record.historyOfPresentIllness,jdbcType=VARCHAR},
+      history_of_treatment = #{record.historyOfTreatment,jdbcType=VARCHAR},
+      past_history = #{record.pastHistory,jdbcType=VARCHAR},
+      allergies = #{record.allergies,jdbcType=VARCHAR},
+      health_checkup = #{record.healthCheckup,jdbcType=VARCHAR},
+      priliminary_dise_id_list = #{record.priliminaryDiseIdList,jdbcType=VARCHAR},
+      priliminary_dise_str_list = #{record.priliminaryDiseStrList,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neu.his.cloud.service.dms.model.DmsCaseModel">
+    update dms_case_model
+    <set>
+      <if test="chiefComplaint != null">
+        chief_complaint = #{chiefComplaint,jdbcType=VARCHAR},
+      </if>
+      <if test="historyOfPresentIllness != null">
+        history_of_present_illness = #{historyOfPresentIllness,jdbcType=VARCHAR},
+      </if>
+      <if test="historyOfTreatment != null">
+        history_of_treatment = #{historyOfTreatment,jdbcType=VARCHAR},
+      </if>
+      <if test="pastHistory != null">
+        past_history = #{pastHistory,jdbcType=VARCHAR},
+      </if>
+      <if test="allergies != null">
+        allergies = #{allergies,jdbcType=VARCHAR},
+      </if>
+      <if test="healthCheckup != null">
+        health_checkup = #{healthCheckup,jdbcType=VARCHAR},
+      </if>
+      <if test="priliminaryDiseIdList != null">
+        priliminary_dise_id_list = #{priliminaryDiseIdList,jdbcType=VARCHAR},
+      </if>
+      <if test="priliminaryDiseStrList != null">
+        priliminary_dise_str_list = #{priliminaryDiseStrList,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neu.his.cloud.service.dms.model.DmsCaseModel">
+    update dms_case_model
+    set chief_complaint = #{chiefComplaint,jdbcType=VARCHAR},
+      history_of_present_illness = #{historyOfPresentIllness,jdbcType=VARCHAR},
+      history_of_treatment = #{historyOfTreatment,jdbcType=VARCHAR},
+      past_history = #{pastHistory,jdbcType=VARCHAR},
+      allergies = #{allergies,jdbcType=VARCHAR},
+      health_checkup = #{healthCheckup,jdbcType=VARCHAR},
+      priliminary_dise_id_list = #{priliminaryDiseIdList,jdbcType=VARCHAR},
+      priliminary_dise_str_list = #{priliminaryDiseStrList,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

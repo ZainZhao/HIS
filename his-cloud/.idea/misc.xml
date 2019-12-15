@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/his-cloud-dependencies/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-service-sms/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-api-app/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-config/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-monitor/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-service-bms/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-service-dms/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-service-pms/pom.xml" />
+        <option value="$PROJECT_DIR$/his-cloud-api-pc/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

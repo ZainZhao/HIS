@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: his-cloud-api-app
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+  zipkin:
+    base-url: http://localhost:9411
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+  jackson:
+    time-zone: GMT+8  # 时区设置
+
+server:
+  port: 10013
+
+feign:  #添加熔断
+  hystrix:
+    enabled: true
+
+  client:
+    default:
+      #这里时间一定要调长，否则feign客户端会报ReadTimeOut  服务端报Error parsing HTTP request header
+      connectTimeout: 60000
+      readTimeout: 60000
+      loggerLevel: basic
+
+#rabbitmq:
+#  host: localhost
+#  port: 5672
+#  username: guest
+#  password: guest
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   #暴露所有的端点我们可以看到更多的服务实例相关信息，
+    endpoint:
+      health:
+        show-details: ALWAYS   #health endpoint是否必须显示全部细节
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+#  ribbon.MaxAutoRetries=0
+#  ribbon.MaxAutoRetriesNextServer=1
+
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#      name: his-cloud-api-app   # 不包括dev等profile
+#      label: master
+#      profile: dev

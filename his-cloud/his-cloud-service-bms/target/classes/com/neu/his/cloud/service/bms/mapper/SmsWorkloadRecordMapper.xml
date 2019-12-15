@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.cloud.service.bms.mapper.SmsWorkloadRecordMapper">
+  <resultMap id="BaseResultMap" type="com.neu.his.cloud.service.bms.model.SmsWorkloadRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="staff_id" jdbcType="BIGINT" property="staffId" />
+    <result column="medicine_amount" jdbcType="DECIMAL" property="medicineAmount" />
+    <result column="herbal_amount" jdbcType="DECIMAL" property="herbalAmount" />
+    <result column="check_amount" jdbcType="DECIMAL" property="checkAmount" />
+    <result column="disposition_amount" jdbcType="DECIMAL" property="dispositionAmount" />
+    <result column="registration_amount" jdbcType="DECIMAL" property="registrationAmount" />
+    <result column="test_amount" jdbcType="DECIMAL" property="testAmount" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="date" jdbcType="TIMESTAMP" property="date" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="registration_num" jdbcType="BIGINT" property="registrationNum" />
+    <result column="excute_check_amount" jdbcType="DECIMAL" property="excuteCheckAmount" />
+    <result column="excute_test_amount" jdbcType="DECIMAL" property="excuteTestAmount" />
+    <result column="excute_disposition_amount" jdbcType="DECIMAL" property="excuteDispositionAmount" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="dept_id" jdbcType="BIGINT" property="deptId" />
+    <result column="excute_num" jdbcType="BIGINT" property="excuteNum" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, create_time, staff_id, medicine_amount, herbal_amount, check_amount, disposition_amount, 
+    registration_amount, test_amount, amount, date, status, registration_num, excute_check_amount, 
+    excute_test_amount, excute_disposition_amount, type, dept_id, excute_num
+  </sql>
+  <select id="selectByExample" parameterType="com.neu.his.cloud.service.bms.model.SmsWorkloadRecordExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from sms_workload_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sms_workload_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from sms_workload_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neu.his.cloud.service.bms.model.SmsWorkloadRecordExample">
+    delete from sms_workload_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.neu.his.cloud.service.bms.model.SmsWorkloadRecord">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sms_workload_record (create_time, staff_id, medicine_amount, 
+      herbal_amount, check_amount, disposition_amount, 
+      registration_amount, test_amount, amount, 
+      date, status, registration_num, 
+      excute_check_amount, excute_test_amount, excute_disposition_amount, 
+      type, dept_id, excute_num
+      )
+    values (#{createTime,jdbcType=TIMESTAMP}, #{staffId,jdbcType=BIGINT}, #{medicineAmount,jdbcType=DECIMAL}, 
+      #{herbalAmount,jdbcType=DECIMAL}, #{checkAmount,jdbcType=DECIMAL}, #{dispositionAmount,jdbcType=DECIMAL}, 
+      #{registrationAmount,jdbcType=DECIMAL}, #{testAmount,jdbcType=DECIMAL}, #{amount,jdbcType=DECIMAL}, 
+      #{date,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, #{registrationNum,jdbcType=BIGINT}, 
+      #{excuteCheckAmount,jdbcType=DECIMAL}, #{excuteTestAmount,jdbcType=DECIMAL}, #{excuteDispositionAmount,jdbcType=DECIMAL}, 
+      #{type,jdbcType=INTEGER}, #{deptId,jdbcType=BIGINT}, #{excuteNum,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.neu.his.cloud.service.bms.model.SmsWorkloadRecord">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into sms_workload_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="staffId != null">
+        staff_id,
+      </if>
+      <if test="medicineAmount != null">
+        medicine_amount,
+      </if>
+      <if test="herbalAmount != null">
+        herbal_amount,
+      </if>
+      <if test="checkAmount != null">
+        check_amount,
+      </if>
+      <if test="dispositionAmount != null">
+        disposition_amount,
+      </if>
+      <if test="registrationAmount != null">
+        registration_amount,
+      </if>
+      <if test="testAmount != null">
+        test_amount,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="date != null">
+        date,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="registrationNum != null">
+        registration_num,
+      </if>
+      <if test="excuteCheckAmount != null">
+        excute_check_amount,
+      </if>
+      <if test="excuteTestAmount != null">
+        excute_test_amount,
+      </if>
+      <if test="excuteDispositionAmount != null">
+        excute_disposition_amount,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="deptId != null">
+        dept_id,
+      </if>
+      <if test="excuteNum != null">
+        excute_num,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="staffId != null">
+        #{staffId,jdbcType=BIGINT},
+      </if>
+      <if test="medicineAmount != null">
+        #{medicineAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="herbalAmount != null">
+        #{herbalAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="checkAmount != null">
+        #{checkAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="dispositionAmount != null">
+        #{dispositionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="registrationAmount != null">
+        #{registrationAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="testAmount != null">
+        #{testAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="date != null">
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="registrationNum != null">
+        #{registrationNum,jdbcType=BIGINT},
+      </if>
+      <if test="excuteCheckAmount != null">
+        #{excuteCheckAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="excuteTestAmount != null">
+        #{excuteTestAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="excuteDispositionAmount != null">
+        #{excuteDispositionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="deptId != null">
+        #{deptId,jdbcType=BIGINT},
+      </if>
+      <if test="excuteNum != null">
+        #{excuteNum,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neu.his.cloud.service.bms.model.SmsWorkloadRecordExample" resultType="java.lang.Integer">
+    select count(*) from sms_workload_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update sms_workload_record
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.staffId != null">
+        staff_id = #{record.staffId,jdbcType=BIGINT},
+      </if>
+      <if test="record.medicineAmount != null">
+        medicine_amount = #{record.medicineAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.herbalAmount != null">
+        herbal_amount = #{record.herbalAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.checkAmount != null">
+        check_amount = #{record.checkAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.dispositionAmount != null">
+        disposition_amount = #{record.dispositionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.registrationAmount != null">
+        registration_amount = #{record.registrationAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.testAmount != null">
+        test_amount = #{record.testAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.amount != null">
+        amount = #{record.amount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.date != null">
+        date = #{record.date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.registrationNum != null">
+        registration_num = #{record.registrationNum,jdbcType=BIGINT},
+      </if>
+      <if test="record.excuteCheckAmount != null">
+        excute_check_amount = #{record.excuteCheckAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.excuteTestAmount != null">
+        excute_test_amount = #{record.excuteTestAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.excuteDispositionAmount != null">
+        excute_disposition_amount = #{record.excuteDispositionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=INTEGER},
+      </if>
+      <if test="record.deptId != null">
+        dept_id = #{record.deptId,jdbcType=BIGINT},
+      </if>
+      <if test="record.excuteNum != null">
+        excute_num = #{record.excuteNum,jdbcType=BIGINT},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update sms_workload_record
+    set id = #{record.id,jdbcType=BIGINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      staff_id = #{record.staffId,jdbcType=BIGINT},
+      medicine_amount = #{record.medicineAmount,jdbcType=DECIMAL},
+      herbal_amount = #{record.herbalAmount,jdbcType=DECIMAL},
+      check_amount = #{record.checkAmount,jdbcType=DECIMAL},
+      disposition_amount = #{record.dispositionAmount,jdbcType=DECIMAL},
+      registration_amount = #{record.registrationAmount,jdbcType=DECIMAL},
+      test_amount = #{record.testAmount,jdbcType=DECIMAL},
+      amount = #{record.amount,jdbcType=DECIMAL},
+      date = #{record.date,jdbcType=TIMESTAMP},
+      status = #{record.status,jdbcType=INTEGER},
+      registration_num = #{record.registrationNum,jdbcType=BIGINT},
+      excute_check_amount = #{record.excuteCheckAmount,jdbcType=DECIMAL},
+      excute_test_amount = #{record.excuteTestAmount,jdbcType=DECIMAL},
+      excute_disposition_amount = #{record.excuteDispositionAmount,jdbcType=DECIMAL},
+      type = #{record.type,jdbcType=INTEGER},
+      dept_id = #{record.deptId,jdbcType=BIGINT},
+      excute_num = #{record.excuteNum,jdbcType=BIGINT}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neu.his.cloud.service.bms.model.SmsWorkloadRecord">
+    update sms_workload_record
+    <set>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="staffId != null">
+        staff_id = #{staffId,jdbcType=BIGINT},
+      </if>
+      <if test="medicineAmount != null">
+        medicine_amount = #{medicineAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="herbalAmount != null">
+        herbal_amount = #{herbalAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="checkAmount != null">
+        check_amount = #{checkAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="dispositionAmount != null">
+        disposition_amount = #{dispositionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="registrationAmount != null">
+        registration_amount = #{registrationAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="testAmount != null">
+        test_amount = #{testAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=DECIMAL},
+      </if>
+      <if test="date != null">
+        date = #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="registrationNum != null">
+        registration_num = #{registrationNum,jdbcType=BIGINT},
+      </if>
+      <if test="excuteCheckAmount != null">
+        excute_check_amount = #{excuteCheckAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="excuteTestAmount != null">
+        excute_test_amount = #{excuteTestAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="excuteDispositionAmount != null">
+        excute_disposition_amount = #{excuteDispositionAmount,jdbcType=DECIMAL},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="deptId != null">
+        dept_id = #{deptId,jdbcType=BIGINT},
+      </if>
+      <if test="excuteNum != null">
+        excute_num = #{excuteNum,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neu.his.cloud.service.bms.model.SmsWorkloadRecord">
+    update sms_workload_record
+    set create_time = #{createTime,jdbcType=TIMESTAMP},
+      staff_id = #{staffId,jdbcType=BIGINT},
+      medicine_amount = #{medicineAmount,jdbcType=DECIMAL},
+      herbal_amount = #{herbalAmount,jdbcType=DECIMAL},
+      check_amount = #{checkAmount,jdbcType=DECIMAL},
+      disposition_amount = #{dispositionAmount,jdbcType=DECIMAL},
+      registration_amount = #{registrationAmount,jdbcType=DECIMAL},
+      test_amount = #{testAmount,jdbcType=DECIMAL},
+      amount = #{amount,jdbcType=DECIMAL},
+      date = #{date,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=INTEGER},
+      registration_num = #{registrationNum,jdbcType=BIGINT},
+      excute_check_amount = #{excuteCheckAmount,jdbcType=DECIMAL},
+      excute_test_amount = #{excuteTestAmount,jdbcType=DECIMAL},
+      excute_disposition_amount = #{excuteDispositionAmount,jdbcType=DECIMAL},
+      type = #{type,jdbcType=INTEGER},
+      dept_id = #{deptId,jdbcType=BIGINT},
+      excute_num = #{excuteNum,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

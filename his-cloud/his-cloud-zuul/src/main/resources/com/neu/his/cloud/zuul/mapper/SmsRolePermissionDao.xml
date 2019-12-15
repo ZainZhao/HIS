@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.cloud.zuul.mapper.SmsRolePermissionDao">
+    <resultMap id="BaseResultMap" type="com.neu.his.cloud.zuul.model.SmsPermission">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="pid" jdbcType="BIGINT" property="pid" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="value" jdbcType="VARCHAR" property="value" />
+        <result column="url" jdbcType="VARCHAR" property="url" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+        <result column="type" jdbcType="INTEGER" property="type" />
+    </resultMap>
+
+    <!--批量新增回写主键支持-->
+    <insert id="insertList">
+        INSERT INTO sms_role_permission_relation (role_id, permission_id) VALUES
+        <foreach collection="list" separator="," item="item" index="index">
+            (#{item.roleId,jdbcType=BIGINT},
+            #{item.permissionId,jdbcType=BIGINT})
+        </foreach>
+    </insert>
+
+    <select id="select" resultMap="BaseResultMap">
+        SELECT * FROM sms_permission
+    </select>
+
+    <select id="getPermissionList" resultMap="BaseResultMap">
+        SELECT
+            p.*
+        FROM
+            sms_role_permission_relation r
+            LEFT JOIN sms_permission p ON r.permission_id = p.id
+        WHERE
+            r.role_id = #{roleId};
+    </select>
+</mapper>

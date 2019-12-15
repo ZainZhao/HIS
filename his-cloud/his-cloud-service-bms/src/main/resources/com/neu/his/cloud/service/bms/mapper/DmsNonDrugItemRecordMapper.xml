@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.cloud.service.bms.mapper.DmsNonDrugItemRecordMapper">
+  <resultMap id="BaseResultMap" type="com.neu.his.cloud.service.bms.model.DmsNonDrugItemRecord">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="registration_id" jdbcType="BIGINT" property="registrationId" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="aim" jdbcType="VARCHAR" property="aim" />
+    <result column="demand" jdbcType="VARCHAR" property="demand" />
+    <result column="log_status" jdbcType="INTEGER" property="logStatus" />
+    <result column="check_result" jdbcType="VARCHAR" property="checkResult" />
+    <result column="result_img_url_list" jdbcType="VARCHAR" property="resultImgUrlList" />
+    <result column="clinical_impression" jdbcType="VARCHAR" property="clinicalImpression" />
+    <result column="clinical_diagnosis" jdbcType="VARCHAR" property="clinicalDiagnosis" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="excute_staff_id" jdbcType="BIGINT" property="excuteStaffId" />
+    <result column="log_datetime" jdbcType="TIMESTAMP" property="logDatetime" />
+    <result column="no_drug_id" jdbcType="BIGINT" property="noDrugId" />
+    <result column="check_parts" jdbcType="VARCHAR" property="checkParts" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="excute_dept_id" jdbcType="BIGINT" property="excuteDeptId" />
+    <result column="create_staff_id" jdbcType="BIGINT" property="createStaffId" />
+    <result column="log_staff_id" jdbcType="BIGINT" property="logStaffId" />
+    <result column="excute_time" jdbcType="TIMESTAMP" property="excuteTime" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, registration_id, status, aim, demand, log_status, check_result, result_img_url_list, 
+    clinical_impression, clinical_diagnosis, create_time, excute_staff_id, log_datetime, 
+    no_drug_id, check_parts, type, excute_dept_id, create_staff_id, log_staff_id, excute_time, 
+    amount
+  </sql>
+  <select id="selectByExample" parameterType="com.neu.his.cloud.service.bms.model.DmsNonDrugItemRecordExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from dms_non_drug_item_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from dms_non_drug_item_record
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from dms_non_drug_item_record
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.neu.his.cloud.service.bms.model.DmsNonDrugItemRecordExample">
+    delete from dms_non_drug_item_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.neu.his.cloud.service.bms.model.DmsNonDrugItemRecord">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_non_drug_item_record (registration_id, status, aim, 
+      demand, log_status, check_result, 
+      result_img_url_list, clinical_impression, clinical_diagnosis, 
+      create_time, excute_staff_id, log_datetime, 
+      no_drug_id, check_parts, type, 
+      excute_dept_id, create_staff_id, log_staff_id, 
+      excute_time, amount)
+    values (#{registrationId,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, #{aim,jdbcType=VARCHAR}, 
+      #{demand,jdbcType=VARCHAR}, #{logStatus,jdbcType=INTEGER}, #{checkResult,jdbcType=VARCHAR}, 
+      #{resultImgUrlList,jdbcType=VARCHAR}, #{clinicalImpression,jdbcType=VARCHAR}, #{clinicalDiagnosis,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{excuteStaffId,jdbcType=BIGINT}, #{logDatetime,jdbcType=TIMESTAMP}, 
+      #{noDrugId,jdbcType=BIGINT}, #{checkParts,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, 
+      #{excuteDeptId,jdbcType=BIGINT}, #{createStaffId,jdbcType=BIGINT}, #{logStaffId,jdbcType=BIGINT}, 
+      #{excuteTime,jdbcType=TIMESTAMP}, #{amount,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.neu.his.cloud.service.bms.model.DmsNonDrugItemRecord">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into dms_non_drug_item_record
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="registrationId != null">
+        registration_id,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="aim != null">
+        aim,
+      </if>
+      <if test="demand != null">
+        demand,
+      </if>
+      <if test="logStatus != null">
+        log_status,
+      </if>
+      <if test="checkResult != null">
+        check_result,
+      </if>
+      <if test="resultImgUrlList != null">
+        result_img_url_list,
+      </if>
+      <if test="clinicalImpression != null">
+        clinical_impression,
+      </if>
+      <if test="clinicalDiagnosis != null">
+        clinical_diagnosis,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="excuteStaffId != null">
+        excute_staff_id,
+      </if>
+      <if test="logDatetime != null">
+        log_datetime,
+      </if>
+      <if test="noDrugId != null">
+        no_drug_id,
+      </if>
+      <if test="checkParts != null">
+        check_parts,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="excuteDeptId != null">
+        excute_dept_id,
+      </if>
+      <if test="createStaffId != null">
+        create_staff_id,
+      </if>
+      <if test="logStaffId != null">
+        log_staff_id,
+      </if>
+      <if test="excuteTime != null">
+        excute_time,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="registrationId != null">
+        #{registrationId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="aim != null">
+        #{aim,jdbcType=VARCHAR},
+      </if>
+      <if test="demand != null">
+        #{demand,jdbcType=VARCHAR},
+      </if>
+      <if test="logStatus != null">
+        #{logStatus,jdbcType=INTEGER},
+      </if>
+      <if test="checkResult != null">
+        #{checkResult,jdbcType=VARCHAR},
+      </if>
+      <if test="resultImgUrlList != null">
+        #{resultImgUrlList,jdbcType=VARCHAR},
+      </if>
+      <if test="clinicalImpression != null">
+        #{clinicalImpression,jdbcType=VARCHAR},
+      </if>
+      <if test="clinicalDiagnosis != null">
+        #{clinicalDiagnosis,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="excuteStaffId != null">
+        #{excuteStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="logDatetime != null">
+        #{logDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="noDrugId != null">
+        #{noDrugId,jdbcType=BIGINT},
+      </if>
+      <if test="checkParts != null">
+        #{checkParts,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="excuteDeptId != null">
+        #{excuteDeptId,jdbcType=BIGINT},
+      </if>
+      <if test="createStaffId != null">
+        #{createStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="logStaffId != null">
+        #{logStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="excuteTime != null">
+        #{excuteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.neu.his.cloud.service.bms.model.DmsNonDrugItemRecordExample" resultType="java.lang.Integer">
+    select count(*) from dms_non_drug_item_record
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update dms_non_drug_item_record
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.registrationId != null">
+        registration_id = #{record.registrationId,jdbcType=BIGINT},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.aim != null">
+        aim = #{record.aim,jdbcType=VARCHAR},
+      </if>
+      <if test="record.demand != null">
+        demand = #{record.demand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.logStatus != null">
+        log_status = #{record.logStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.checkResult != null">
+        check_result = #{record.checkResult,jdbcType=VARCHAR},
+      </if>
+      <if test="record.resultImgUrlList != null">
+        result_img_url_list = #{record.resultImgUrlList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.clinicalImpression != null">
+        clinical_impression = #{record.clinicalImpression,jdbcType=VARCHAR},
+      </if>
+      <if test="record.clinicalDiagnosis != null">
+        clinical_diagnosis = #{record.clinicalDiagnosis,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.excuteStaffId != null">
+        excute_staff_id = #{record.excuteStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="record.logDatetime != null">
+        log_datetime = #{record.logDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.noDrugId != null">
+        no_drug_id = #{record.noDrugId,jdbcType=BIGINT},
+      </if>
+      <if test="record.checkParts != null">
+        check_parts = #{record.checkParts,jdbcType=VARCHAR},
+      </if>
+      <if test="record.type != null">
+        type = #{record.type,jdbcType=INTEGER},
+      </if>
+      <if test="record.excuteDeptId != null">
+        excute_dept_id = #{record.excuteDeptId,jdbcType=BIGINT},
+      </if>
+      <if test="record.createStaffId != null">
+        create_staff_id = #{record.createStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="record.logStaffId != null">
+        log_staff_id = #{record.logStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="record.excuteTime != null">
+        excute_time = #{record.excuteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.amount != null">
+        amount = #{record.amount,jdbcType=DECIMAL},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update dms_non_drug_item_record
+    set id = #{record.id,jdbcType=BIGINT},
+      registration_id = #{record.registrationId,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=INTEGER},
+      aim = #{record.aim,jdbcType=VARCHAR},
+      demand = #{record.demand,jdbcType=VARCHAR},
+      log_status = #{record.logStatus,jdbcType=INTEGER},
+      check_result = #{record.checkResult,jdbcType=VARCHAR},
+      result_img_url_list = #{record.resultImgUrlList,jdbcType=VARCHAR},
+      clinical_impression = #{record.clinicalImpression,jdbcType=VARCHAR},
+      clinical_diagnosis = #{record.clinicalDiagnosis,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      excute_staff_id = #{record.excuteStaffId,jdbcType=BIGINT},
+      log_datetime = #{record.logDatetime,jdbcType=TIMESTAMP},
+      no_drug_id = #{record.noDrugId,jdbcType=BIGINT},
+      check_parts = #{record.checkParts,jdbcType=VARCHAR},
+      type = #{record.type,jdbcType=INTEGER},
+      excute_dept_id = #{record.excuteDeptId,jdbcType=BIGINT},
+      create_staff_id = #{record.createStaffId,jdbcType=BIGINT},
+      log_staff_id = #{record.logStaffId,jdbcType=BIGINT},
+      excute_time = #{record.excuteTime,jdbcType=TIMESTAMP},
+      amount = #{record.amount,jdbcType=DECIMAL}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.neu.his.cloud.service.bms.model.DmsNonDrugItemRecord">
+    update dms_non_drug_item_record
+    <set>
+      <if test="registrationId != null">
+        registration_id = #{registrationId,jdbcType=BIGINT},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="aim != null">
+        aim = #{aim,jdbcType=VARCHAR},
+      </if>
+      <if test="demand != null">
+        demand = #{demand,jdbcType=VARCHAR},
+      </if>
+      <if test="logStatus != null">
+        log_status = #{logStatus,jdbcType=INTEGER},
+      </if>
+      <if test="checkResult != null">
+        check_result = #{checkResult,jdbcType=VARCHAR},
+      </if>
+      <if test="resultImgUrlList != null">
+        result_img_url_list = #{resultImgUrlList,jdbcType=VARCHAR},
+      </if>
+      <if test="clinicalImpression != null">
+        clinical_impression = #{clinicalImpression,jdbcType=VARCHAR},
+      </if>
+      <if test="clinicalDiagnosis != null">
+        clinical_diagnosis = #{clinicalDiagnosis,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="excuteStaffId != null">
+        excute_staff_id = #{excuteStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="logDatetime != null">
+        log_datetime = #{logDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="noDrugId != null">
+        no_drug_id = #{noDrugId,jdbcType=BIGINT},
+      </if>
+      <if test="checkParts != null">
+        check_parts = #{checkParts,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="excuteDeptId != null">
+        excute_dept_id = #{excuteDeptId,jdbcType=BIGINT},
+      </if>
+      <if test="createStaffId != null">
+        create_staff_id = #{createStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="logStaffId != null">
+        log_staff_id = #{logStaffId,jdbcType=BIGINT},
+      </if>
+      <if test="excuteTime != null">
+        excute_time = #{excuteTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.neu.his.cloud.service.bms.model.DmsNonDrugItemRecord">
+    update dms_non_drug_item_record
+    set registration_id = #{registrationId,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
+      aim = #{aim,jdbcType=VARCHAR},
+      demand = #{demand,jdbcType=VARCHAR},
+      log_status = #{logStatus,jdbcType=INTEGER},
+      check_result = #{checkResult,jdbcType=VARCHAR},
+      result_img_url_list = #{resultImgUrlList,jdbcType=VARCHAR},
+      clinical_impression = #{clinicalImpression,jdbcType=VARCHAR},
+      clinical_diagnosis = #{clinicalDiagnosis,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      excute_staff_id = #{excuteStaffId,jdbcType=BIGINT},
+      log_datetime = #{logDatetime,jdbcType=TIMESTAMP},
+      no_drug_id = #{noDrugId,jdbcType=BIGINT},
+      check_parts = #{checkParts,jdbcType=VARCHAR},
+      type = #{type,jdbcType=INTEGER},
+      excute_dept_id = #{excuteDeptId,jdbcType=BIGINT},
+      create_staff_id = #{createStaffId,jdbcType=BIGINT},
+      log_staff_id = #{logStaffId,jdbcType=BIGINT},
+      excute_time = #{excuteTime,jdbcType=TIMESTAMP},
+      amount = #{amount,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

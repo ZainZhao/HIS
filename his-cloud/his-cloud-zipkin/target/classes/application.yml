@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: his-cloud-zipkin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+server:
+  port: 9411
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"   #暴露所有的端点我们可以看到更多的服务实例相关信息，
+    endpoint:
+      health:
+        show-details: ALWAYS   #health endpoint是否必须显示全部细节
