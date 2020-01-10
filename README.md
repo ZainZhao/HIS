@@ -191,6 +191,14 @@ HIS 项目致力于打造一个完整的医疗系统，采用现阶段流行技�
 
 ![项目开发进度图](document/picture/需求思维图.png)
 
+
+
+## 版权声明
+
+本系统已申请著作权，商业和自媒体转载前务必联系作者zy.zain@qq.com
+
+个人转载请注明作者和仓库地址
+
 ## 许可证
 
 [Apache License 2.0](https://github.com/macrozheng/mall/blob/master/LICENSE)
