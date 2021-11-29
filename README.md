@@ -4,7 +4,7 @@ HIS英文全称 hospital information system（医院信息系统），系统主�
 
 ``有问题请直接 issue（商用请联系本人邮箱）``
 
-演示地址：http://47.104.17.114/
+演示地址：http://eatoffer.cn
 
 登录用户：演示用户
 
