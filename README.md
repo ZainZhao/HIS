@@ -9,8 +9,6 @@ HIS英文全称 hospital information system（医院信息系统），系统主�
 登录用户：演示用户
 
 登录密码：test
-
-**申明**：项目为NEU实训课设本组所作
        
 
 
