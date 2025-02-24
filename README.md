@@ -4,6 +4,10 @@ HIS 英文全称 Hospital Information System（医院信息系统），主要功
 
 ``有问题请直接 issue（完整代码、完整文档、商用、二开项目合作 请联系本人邮箱）``
 
+
+  ![病历模板](document/picture/his-document.png)
+  
+
 演示地址：http://eatoffer.cn
 
 登录用户：演示用户
